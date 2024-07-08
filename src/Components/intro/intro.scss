@@ -3,6 +3,10 @@
 .intro {
   background-color: white;
   display: flex;
+  background-image: url("assets/bg-slider.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include mobile {
     flex-direction: column;
@@ -46,6 +50,26 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      .btn {
+        .button {
+          background-color: #86ff00;
+          clip-path: polygon(
+            0 0,
+            calc(100% - 10px) 0,
+            100% 10px,
+            100% 100%,
+            10px 100%,
+            0 calc(100% - 10px)
+          );
+          font-weight: bold;
+          padding: 12px 30px;
+          color: #000;
+          &:hover {
+            background-color: #798da3;
+            color: #fff;
+          }
+        }
+      }
       @include mobile {
         align-items: center;
         padding: 0;

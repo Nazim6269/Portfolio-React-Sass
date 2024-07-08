@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { init } from "ityped";
 import React, { useEffect, useRef } from "react";
 import "./intro.scss";
@@ -15,11 +16,7 @@ const Intro = () => {
   }, []);
   return (
     <div className="intro" id="intro">
-      <div className="left">
-        <div className="imgContainer">
-          <img src="assets/shadin.png" alt="" />
-        </div>
-      </div>
+      <div className="left"></div>
       <div className="right">
         <div className="wrapper">
           <h2>Hi There, I&apos;m</h2>
@@ -27,6 +24,12 @@ const Intro = () => {
           <h3>
             Freelance <span ref={textRef}></span>
           </h3>
+          <div className="btn">
+            <Button variant="contained" className="button">
+              {" "}
+              Contact
+            </Button>
+          </div>
         </div>
         <a href="#portfolio">
           <img src="assets/down.png" alt="" />
