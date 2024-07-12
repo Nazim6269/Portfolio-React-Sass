@@ -1,8 +1,14 @@
 @import "../../global.scss";
 
 .contact {
-  background-color: white;
+  background-color: #09121d;
+  color: #ffffff;
   display: flex;
+  background-image: url("bg_project2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 
   @include mobile {
     flex-direction: column;
