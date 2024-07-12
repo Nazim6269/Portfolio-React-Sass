@@ -1,6 +1,16 @@
+import React from "react";
+import SwiperCore, { EffectCoverflow, Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import PaginationCard from "../pagination/Pagination";
 import "./skills.scss";
 
-export default function Testimonials() {
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
+
+export default function Skills() {
   const data = [
     {
       id: 1,
@@ -72,24 +82,38 @@ export default function Testimonials() {
     <div className="testimonials" id="testimonials">
       <h1>Skills</h1>
       <div className="container">
-        {data.map((item) => (
-          <div
-            key={item.id}
-            className={item.featured ? "card featured" : "card"}
-          >
-            <div className="top">
-              <img className="user" src={item.img} alt="" />
-              {/* <img src="assets/right-arrow.png" className="left" alt="" />
-              <img className="right" src={item.icon} alt="" /> */}
-            </div>
-
-            <div className="bottom">
-              <h3>{item.name}</h3>
-              <h4>{item.status}</h4>
-            </div>
-          </div>
-        ))}
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView="auto"
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{ clickable: true }}
+          navigation
+        >
+          {data.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className={item.featured ? "card featured" : "card"}>
+                <div className="top">
+                  <img className="user" src={item.img} alt="" />
+                </div>
+                <div className="bottom">
+                  <h3>{item.name}</h3>
+                  <h4>{item.status}</h4>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+      {/* Pagination component */}
+      <PaginationCard />
     </div>
   );
 }
