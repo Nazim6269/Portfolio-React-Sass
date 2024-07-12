@@ -3,12 +3,20 @@
 .contact {
   background-color: #09121d;
   color: #ffffff;
-  display: flex;
+  padding: 3rem 0;
   background-image: url("bg_project2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 50px;
+  }
 
   @include mobile {
     flex-direction: column;

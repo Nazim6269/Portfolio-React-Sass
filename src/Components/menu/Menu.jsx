@@ -10,7 +10,7 @@ const Menu = () => {
         </li>
 
         <li>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio">Projects</a>
         </li>
 
         <li>
@@ -18,7 +18,7 @@ const Menu = () => {
         </li>
 
         <li>
-          <a href="#testimonial">Testimonial</a>
+          <a href="#testimonial">Skills</a>
         </li>
       </ul>
     </div>

@@ -11,6 +11,7 @@ export default function Contact() {
 
   return (
     <div className="contact" id="contact">
+      <h1>Get Contact</h1>
       <div className="left">{/* <img src="assets/shake.svg" alt="" /> */}</div>
       <div className="right">
         <h2>Contact.</h2>

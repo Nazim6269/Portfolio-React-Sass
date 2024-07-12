@@ -1,0 +1,25 @@
+@import "../../global.scss";
+
+.portfolioList {
+  font-size: 18px;
+  margin-right: 50px;
+  padding: 8px 15px;
+  border-radius: 0;
+  cursor: pointer;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+
+  &.active {
+    background-color: #86ff00;
+    color: #000;
+  }
+  &:hover {
+    color: #86ff00;
+  }
+}

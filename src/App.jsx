@@ -3,8 +3,8 @@ import "./app.scss";
 import Contact from "./Components/contact/Contact";
 import Footer from "./Components/footer/Footer";
 import Intro from "./Components/intro/Intro";
-import Portfolio from "./Components/portfolio/Portfolio";
-import Testimonial from "./Components/testimonial/Testimonial";
+import Projects from "./Components/portfolio/Projects";
+import Testimonial from "./Components/testimonial/Skills";
 import Topbar from "./Components/topbar/Topbar";
 import Work from "./Components/work/Work";
 
@@ -16,7 +16,7 @@ function App() {
       <div className="section">
         <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Intro />
-        <Portfolio />
+        <Projects />
         <Work />
         <Testimonial />
         <Contact />

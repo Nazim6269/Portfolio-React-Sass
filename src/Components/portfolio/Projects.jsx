@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import "./portfolio.scss";
+import "./projects.scss";
 import {
   featuredPortfolio,
   webPortfolio,
@@ -8,31 +8,31 @@ import {
   designPortfolio,
   contentPortfolio,
 } from "../../data";
-import PortfolioList from "../porfolioList/PortfolioList";
+import PortfolioList from "../porfolioList/ProjectsList";
 
-export default function Portfolio() {
+export default function Projects() {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
   const list = [
     {
       id: "featured",
-      title: "Featured",
+      title: "NextJS",
     },
     {
       id: "web",
-      title: "Web App",
+      title: "ReactJS",
     },
     {
       id: "mobile",
-      title: "Mobile App",
+      title: "DOM",
     },
     {
       id: "design",
-      title: "Design",
+      title: "HTML-CSS",
     },
     {
       id: "content",
-      title: "Content",
+      title: "Random",
     },
   ];
 
@@ -60,7 +60,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Projects</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
