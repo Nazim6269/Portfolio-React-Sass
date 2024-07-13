@@ -7,24 +7,24 @@ import "./topbar.scss";
 const Topbar = () => {
   return (
     <div className={"topbar "}>
-      <div className="wrapper">
+      <div className="topbar__wrapper">
         {/* ========= Left portion ========= */}
-        <div className="left">
+        <div className="topbar__wrapper__left">
           <div>
             {" "}
-            <a href="#intro" className="logo">
+            <a href="#intro" className="topbar__wrapper__left__logo">
               Pro.
             </a>
           </div>
-          <div className="itemContainer">
+          <div className="topbar__wrapper__left__item-container">
             <Person className="icon" />
             <span>+44 034 43</span>
           </div>
-          <div className="itemContainer">
-            <Mail className="icon" />
+          <div className="topbar__wrapper__left__item-container">
+            <Mail className="topbar__wrapper__left__item-container__icon" />
             <span>nazimuddin@gmail.com</span>
           </div>
-          <div className="btn">
+          <div className="topbar__wrapper__left__btn">
             <Button variant="contained" className="button">
               {" "}
               Contact
@@ -32,17 +32,17 @@ const Topbar = () => {
           </div>
         </div>
         {/* ======== Middle portion ============= */}
-        <div className="middle">
+        <div className="topbar__wrapper__middle">
           <Menu />
         </div>
 
-        {/* <div className="right">
-          <div className="hamburger">
+        <div className="topbar__wrapper__right">
+          <div className="topbar__wrapper__right__hamburger">
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

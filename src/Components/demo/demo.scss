@@ -1,0 +1,13 @@
+.card {
+  background-color: aquamarine;
+  &__body {
+    font-size: 15px;
+    &__title {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    &__text {
+      color: red;
+    }
+  }
+}

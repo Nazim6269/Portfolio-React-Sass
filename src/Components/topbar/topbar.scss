@@ -1,58 +1,80 @@
 @import "../../global.scss";
+@import "../../variable";
+@import "../../breakpoints";
 
 //====css=====//
 .topbar {
-  width: 75%;
-  margin: auto;
+  width: 100%;
   transition: all 1s ease;
+  background-color: $primary-color;
+  color: #fff;
+  @include sx {
+    background-color: aqua;
+  }
+  @include sm {
+    background-color: blue;
+  }
+  @include md {
+    background-color: $secondary-color;
+  }
+  @include lg {
+    background-color: red;
+  }
+  @include xl {
+    background-color: green;
+  }
 
-  .wrapper {
+  &__wrapper {
     padding: 10px 30px;
+    width: 75%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .left {
+    &__left {
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      .logo {
-        font-size: 40px;
+      &__logo {
+        font-size: $font-size-medium;
         font-weight: 700;
         text-decoration: none;
         text-transform: capitalize;
         color: inherit;
         margin-right: 40px;
 
-        @include mobile {
-          font-size: 30px;
+        @include lg {
+          font-size: $font-size-large;
         }
       }
 
-      .itemContainer {
-        display: flex;
-        align-items: center;
-        margin-left: 30px;
-
-        @include mobile {
-          display: none;
+      &__item-container {
+        display: none;
+        @include md {
+          display: flex;
+          align-items: center;
+          margin-left: $font-size-medium;
         }
 
-        .icon {
-          font-size: 18px;
-          margin-right: 5px;
+        &__icon {
+          display: none;
+          @include sm {
+            font-size: 18px;
+            margin-right: 5px;
+          }
         }
 
         span {
-          font-size: 15px;
+          font-size: $font-size-small;
           font-weight: 500;
         }
       }
-      .btn {
+      &__btn {
         margin-left: 9px;
         .button {
-          background-color: #798da3;
+          background-color: $secondary-color;
           clip-path: polygon(
             0 0,
             calc(100% - 10px) 0,
@@ -64,15 +86,25 @@
           font-weight: bold;
           padding: 12px 30px;
           &:hover {
-            background-color: #86ff00;
+            background-color: $hover-color;
             color: #000;
           }
+        }
+        @include xxs {
+          display: none;
         }
       }
     }
 
-    .right {
-      .hamburger {
+    &__middle {
+      display: inline;
+      @include xxs {
+        display: none;
+      }
+    }
+
+    &__right {
+      &__hamburger {
         width: 32px;
         height: 25px;
         display: flex;
@@ -86,6 +118,11 @@
           background-color: $mainColor;
           transform-origin: left;
           transition: all 2s ease;
+        }
+        @include sx {
+        }
+        @include sx {
+          display: none;
         }
       }
     }
