@@ -3,7 +3,7 @@ import "./app.scss";
 import Contact from "./Components/contact/Contact";
 import Footer from "./Components/footer/Footer";
 import Intro from "./Components/intro/Intro";
-import Projects from "./Components/portfolio/Projects";
+import Projects from "./Components/projects/Projects";
 import Skills from "./Components/skills/Skills";
 import Topbar from "./Components/topbar/Topbar";
 import Work from "./Components/work/Work";
@@ -21,6 +21,7 @@ function App() {
         <Skills />
         <Contact />
         <Footer />
+        {/* <Demo /> */}
       </div>
     </div>
   );

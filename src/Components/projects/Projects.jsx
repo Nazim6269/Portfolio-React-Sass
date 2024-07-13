@@ -8,7 +8,7 @@ import {
   designPortfolio,
   contentPortfolio,
 } from "../../data";
-import PortfolioList from "../porfolioList/ProjectsList";
+import PortfolioList from "../projectList/ProjectsList";
 
 export default function Projects() {
   const [selected, setSelected] = useState("featured");
