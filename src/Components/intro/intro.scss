@@ -3,7 +3,7 @@
 @import '../../variable';
 
 //================local variables================//
-%button-styles {
+@mixin button-styles {
   background-color: #86ff00;
   clip-path: polygon(
     0 0,
@@ -25,19 +25,25 @@
 //==========sass code start from here=============//
 .intro {
   color: $primary-text-color;
-  display: flex;
   background-image: url('bg-slider.png');
   background-color: #050724;
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100vh - 15px);
+  height: auto;
 
   &__wrapper {
     width: 75%;
     margin: auto;
     display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+
+    @include lg {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
 
@@ -55,16 +61,26 @@
 }
 
 .intro__btn .button {
-  @extend %button-styles;
+  @include button-styles;
+  //padding: 9px 22px;
+  @include md {
+    @include button-styles;
+  }
 }
 
 .intro__item-container h1 {
-  font-size: $intro-font-size-large;
+  font-size: $intro-font-size-small;
   margin: 10px 0;
+  @include md {
+    font-size: $intro-font-size-large;
+  }
 }
 
 .intro__item-container h2 {
-  font-size: $intro-font-size-medium;
+  font-size: $font-size-small;
+  @include md {
+    font-size: $intro-font-size-medium;
+  }
 }
 
 .intro__item-container h3 {
@@ -78,43 +94,63 @@
   color: crimson;
 }
 
-.intro__item-container .ityped-cursor {
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.intro a {
-  position: absolute;
-  bottom: 60px;
-  left: 40%;
-}
-
-.intro a img {
-  width: 30px;
-  animation: arrowBlink 2s infinite;
-}
-
-@keyframes arrowBlink {
-  100% {
-    opacity: 0;
-  }
-}
-
 .intro__right {
   flex: 0.5;
   overflow: hidden;
 }
 
-.intro__ninjaIcon {
+.intro__planeIcon {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro__icon-ninja-container {
   position: absolute;
   top: 400px;
-  right: 350px;
+  right: 35px;
+  @include md {
+    position: absolute;
+    top: 400px;
+    right: 350px;
+  }
+}
+
+.intro__ninjaIcon {
+  height: 92px;
+  width: auto;
+
+  @include sm {
+    height: 142px;
+    width: auto;
+  }
+
+  @include md {
+    height: 168px;
+    width: auto;
+  }
+
+  @include lg {
+    height: 18vh;
+    width: auto;
+  }
+}
+
+.intro__cartoonIcon {
+  height: 92px;
+  width: auto;
+
+  @include sm {
+    height: 142px;
+    width: auto;
+  }
+
+  @include md {
+    height: 168px;
+    width: auto;
+  }
+
+  @include lg {
+    height: 18vh;
+    width: auto;
+  }
 }

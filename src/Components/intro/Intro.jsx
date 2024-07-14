@@ -38,15 +38,15 @@ const Intro = () => {
         {/* ==============right section============== */}
         <div className="intro__right">
           <motion.div
-            className="intro__ninjaIcon"
             animate={{ x: -100 }}
+            className="intro__icon-ninja-container"
             transition={{
               repeat: Infinity,
               repeatType: 'reverse',
               duration: 5,
             }}
           >
-            <img src="icon_1.png" alt="Icon X" />
+            <img className="intro__ninjaIcon" src="icon_1.png" alt="Icon X" />
           </motion.div>
           <motion.div
             animate={{ y: 100 }}
@@ -56,7 +56,7 @@ const Intro = () => {
               duration: 7,
             }}
           >
-            <img src="Furore.png" alt="Icon Y" />
+            <img className="intro__planeIcon" src="Furore.png" alt="Icon Y" />
           </motion.div>
           <motion.div
             animate={{ x: 100 }}
@@ -66,7 +66,11 @@ const Intro = () => {
               duration: 7,
             }}
           >
-            <img src="icon_3.png" alt="Icon Rotate" />
+            <img
+              className="intro__cartoonIcon"
+              src="icon_3.png"
+              alt="Icon Rotate"
+            />
           </motion.div>
         </div>
       </div>
