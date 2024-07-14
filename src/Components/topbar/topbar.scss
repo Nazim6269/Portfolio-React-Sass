@@ -8,14 +8,20 @@
   transition: all 1s ease;
   background-color: $primary-color;
   color: #fff;
+  display: flex;
+  justify-content: center;
 
   &__wrapper {
     padding: 10px 30px;
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    // margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include lg {
+      width: 75%;
+      margin: auto;
+    }
 
     &__left {
       display: flex;

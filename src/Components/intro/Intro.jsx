@@ -1,21 +1,10 @@
 import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
-import { init } from 'ityped';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import TypingAnimation from '../../utils/typingAnimation/TypingAnimagtion';
 import './intro.scss';
 
 const Intro = () => {
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: true,
-      backDelay: 1500,
-      backSpeed: 60,
-      strings: ['Developer!', 'Designer!'],
-    });
-  }, []);
-
   return (
     <div className="intro" id="intro">
       <div className="intro__wrapper">
@@ -25,7 +14,10 @@ const Intro = () => {
             <h2>Hi There, I&apos;m</h2>
             <h1>Nazim Uddin</h1>
             <h3>
-              Freelance with <span ref={textRef}></span>
+              Freelance with{' '}
+              <span>
+                <TypingAnimation text={'Developer'} delay={500} infinite />
+              </span>
             </h3>
             <div className="intro__btn">
               <Button variant="contained" className="button">

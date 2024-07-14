@@ -34,13 +34,15 @@
   height: auto;
 
   &__wrapper {
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    // margin: auto;
     display: flex;
     flex-direction: column;
-    padding: 4rem 0;
+    padding: 4rem 30px;
 
     @include lg {
+      width: 75%;
+      margin: auto;
       display: flex;
       flex-direction: row;
     }
@@ -54,7 +56,7 @@
 .intro__item-container {
   width: 100%;
   height: 100%;
-  padding-left: 50px;
+  //padding-left: 50px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,8 +87,14 @@
 
 .intro__item-container h3 {
   font-size: $intro-font-size-small;
-  @include mobile {
-    font-size: 20px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
   }
 }
 .intro__item-container span {
