@@ -1,4 +1,5 @@
 @import "../../global.scss";
+@import "../../breakpoints";
 
 .menu {
   ul {
@@ -18,6 +19,9 @@
         font-size: inherit;
         color: inherit;
         text-decoration: none;
+      }
+      @include xl {
+        font-size: 15px;
       }
 
       &:hover {

@@ -1,145 +1,120 @@
-@import "../../global.scss";
+@import '../../global.scss';
+@import '../../breakpoints';
+@import '../../variable';
 
+//================local variables================//
+%button-styles {
+  background-color: #86ff00;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  font-weight: bold;
+  padding: 12px 30px;
+  color: #000;
+  &:hover {
+    background-color: $hover-color-secondary;
+    color: $primary-text-color;
+  }
+}
+
+//==========sass code start from here=============//
 .intro {
-  color: #fff;
+  color: $primary-text-color;
   display: flex;
-  background-image: url("bg-slider.png");
+  background-image: url('bg-slider.png');
   background-color: #050724;
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 15px);
-  .introWrapper {
+
+  &__wrapper {
     width: 75%;
     margin: auto;
     display: flex;
-
-    @include mobile {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .right {
-      flex: 0.5;
-      overflow: hidden;
-
-      .ninjaIcon {
-        position: absolute;
-        top: 400px;
-        right: 350px;
-      }
-
-      .imgContainer {
-        width: 700px;
-        height: 700px;
-        background-color: crimson;
-        border-radius: 50%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        float: right;
-
-        @include mobile {
-          align-items: flex-start;
-        }
-
-        img {
-          height: 90%;
-          @include mobile {
-            height: 50%;
-          }
-        }
-      }
-    }
-    .left {
-      flex: 0.5;
-      // position: relative;
-
-      .wrapper {
-        width: 100%;
-        height: 100%;
-        padding-left: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .btn {
-          .button {
-            background-color: #86ff00;
-            clip-path: polygon(
-              0 0,
-              calc(100% - 10px) 0,
-              100% 10px,
-              100% 100%,
-              10px 100%,
-              0 calc(100% - 10px)
-            );
-            font-weight: bold;
-            padding: 12px 30px;
-            color: #000;
-            &:hover {
-              background-color: #798da3;
-              color: #fff;
-            }
-          }
-        }
-        @include mobile {
-          align-items: center;
-          padding: 0;
-        }
-
-        h1 {
-          font-size: 60px;
-          margin: 10px 0;
-
-          @include mobile {
-            font-size: 40px;
-          }
-        }
-        h2 {
-          font-size: 35px;
-        }
-        h3 {
-          font-size: 30px;
-          @include mobile {
-            font-size: 20px;
-          }
-
-          span {
-            font-size: inherit;
-            color: crimson;
-          }
-
-          .ityped-cursor {
-            animation: blink 1s infinite;
-          }
-
-          @keyframes blink {
-            50% {
-              opacity: 1;
-            }
-            100% {
-              opacity: 0;
-            }
-          }
-        }
-      }
-      a {
-        position: absolute;
-        bottom: 60px;
-        left: 40%;
-
-        img {
-          width: 30px;
-          animation: arrowBlink 2s infinite;
-        }
-
-        @keyframes arrowBlink {
-          100% {
-            opacity: 0;
-          }
-        }
-      }
-    }
   }
+}
+
+.intro__left {
+  flex: 0.5;
+}
+
+.intro__item-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro__btn .button {
+  @extend %button-styles;
+}
+
+.intro__item-container h1 {
+  font-size: $intro-font-size-large;
+  margin: 10px 0;
+}
+
+.intro__item-container h2 {
+  font-size: $intro-font-size-medium;
+}
+
+.intro__item-container h3 {
+  font-size: $intro-font-size-small;
+  @include mobile {
+    font-size: 20px;
+  }
+}
+.intro__item-container span {
+  font-size: inherit;
+  color: crimson;
+}
+
+.intro__item-container .ityped-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro a {
+  position: absolute;
+  bottom: 60px;
+  left: 40%;
+}
+
+.intro a img {
+  width: 30px;
+  animation: arrowBlink 2s infinite;
+}
+
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
+}
+
+.intro__right {
+  flex: 0.5;
+  overflow: hidden;
+}
+
+.intro__ninjaIcon {
+  position: absolute;
+  top: 400px;
+  right: 350px;
 }
