@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import '../../variable';
 
 .testimonials {
   height: 80vh;
@@ -8,7 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("bg_team_section.png");
+  background-image: url('bg_team_section.png');
   display: flex;
   flex-direction: column;
   align-items: center;

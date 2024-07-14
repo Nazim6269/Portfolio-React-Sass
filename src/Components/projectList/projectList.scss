@@ -1,9 +1,10 @@
-@import "../../global.scss";
+@import '../../variable';
+@import '../../breakpoints';
 
 .portfolioList {
-  font-size: 18px;
-  margin-right: 50px;
-  padding: 8px 15px;
+  font-size: 17px;
+  //margin-right: 50px;
+  padding: 6px 3px;
   border-radius: 0;
   cursor: pointer;
   clip-path: polygon(
@@ -14,12 +15,21 @@
     10px 100%,
     0 calc(100% - 10px)
   );
+  text-align: center;
 
   &.active {
-    background-color: #86ff00;
+    background-color: $hover-color;
     color: #000;
   }
   &:hover {
-    color: #86ff00;
+    color: $secondary-color;
+  }
+
+  @include sm {
+    padding: 8px 15px;
+  }
+
+  @include lg {
+    font-size: 20px;
   }
 }

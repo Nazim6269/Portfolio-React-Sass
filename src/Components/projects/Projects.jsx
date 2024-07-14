@@ -1,56 +1,34 @@
-import { useEffect, useState } from "react";
-
-import "./projects.scss";
+import { useEffect, useState } from 'react';
+import './projects.scss';
 import {
   featuredPortfolio,
   webPortfolio,
   mobilePortfolio,
   designPortfolio,
   contentPortfolio,
-} from "../../data";
-import PortfolioList from "../projectList/ProjectsList";
+  projectList,
+} from '../../data';
+import PortfolioList from '../projectList/ProjectsList';
 
 export default function Projects() {
-  const [selected, setSelected] = useState("featured");
+  const [selected, setSelected] = useState('featured');
   const [data, setData] = useState([]);
-  const list = [
-    {
-      id: "featured",
-      title: "NextJS",
-    },
-    {
-      id: "web",
-      title: "ReactJS",
-    },
-    {
-      id: "mobile",
-      title: "DOM",
-    },
-    {
-      id: "design",
-      title: "HTML-CSS",
-    },
-    {
-      id: "content",
-      title: "Random",
-    },
-  ];
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
+      case 'featured':
         setData(featuredPortfolio);
         break;
-      case "web":
+      case 'web':
         setData(webPortfolio);
         break;
-      case "mobile":
+      case 'mobile':
         setData(mobilePortfolio);
         break;
-      case "design":
+      case 'design':
         setData(designPortfolio);
         break;
-      case "content":
+      case 'content':
         setData(contentPortfolio);
         break;
       default:
@@ -59,10 +37,10 @@ export default function Projects() {
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
+    <div className="projects" id="projects">
       <h1>Projects</h1>
       <ul>
-        {list.map((item) => (
+        {projectList.map((item) => (
           <PortfolioList
             title={item.title}
             active={selected === item.id}
@@ -72,9 +50,9 @@ export default function Projects() {
           />
         ))}
       </ul>
-      <div className="container">
+      <div className="projects__container">
         {data.map((item) => (
-          <div key={item.id} className="item">
+          <div key={item.id} className="projects__item">
             <img src={item.img} alt={item.title} />
             <h3>{item.title}</h3>
           </div>
