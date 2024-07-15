@@ -15,11 +15,9 @@
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
     "framer-motion": "^11.3.2",
-    "ityped": "^1.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^5.2.1",
-    "swiper": "^11.1.4"
+    "react-icons": "^5.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
