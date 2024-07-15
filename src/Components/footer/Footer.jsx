@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  TiSocialFacebook,
+  TiSocialInstagram,
+  TiSocialLinkedin,
+  TiSocialTwitter,
+} from 'react-icons/ti';
 import './footer.scss'; // Assuming you save the SASS file as footer.scss
 
 const Footer = () => {
@@ -6,24 +12,25 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__content">
         <div className="footer__section footer__section--social">
-          <h4 className="footer__title">Follow Us</h4>
+          <h4 className="footer__title">Follow me</h4>
           <div className="footer__social-icons">
             <a href="#" className="footer__icon footer__icon--facebook">
-              Facebook
+              <TiSocialFacebook />
             </a>
+
             <a href="#" className="footer__icon footer__icon--twitter">
-              Twitter
+              <TiSocialTwitter />
             </a>
             <a href="#" className="footer__icon footer__icon--instagram">
-              Instagram
+              <TiSocialInstagram />
             </a>
             <a href="#" className="footer__icon footer__icon--linkedin">
-              LinkedIn
+              <TiSocialLinkedin />
             </a>
           </div>
         </div>
         <div className="footer__section footer__section--contact">
-          <h4 className="footer__title">Contact Us</h4>
+          <h4 className="footer__title">Contact me</h4>
           <p className="footer__text">
             Al falah goli, sholo-shohor, Chittagong, Bangladesh
           </p>
