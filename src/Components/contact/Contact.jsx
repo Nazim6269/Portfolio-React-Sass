@@ -1,7 +1,7 @@
-import { Button } from "@mui/material";
-import { motion } from "framer-motion";
-import { useState } from "react";
-import "./contact.scss";
+import { Button } from '@mui/material';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import './contact.scss';
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
@@ -14,30 +14,30 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       <h1>Get Contact</h1>
-      <div className="leftWrapper">
-        <div className="left">
+      <div className="contact__wrapper">
+        <div className="contact__left">
           <motion.img
             animate={{ rotate: 360 }}
             transition={{
               repeat: Infinity,
               duration: 8,
-              ease: "linear",
+              ease: 'linear',
             }}
             src="reactNoBackground.png"
             alt=""
           />
         </div>
-        <div className="right">
+        <div className="contact__right">
           <h2>Contact</h2>
           <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Email" />
             <textarea placeholder="Message"></textarea>
-            <div className="btn">
-              <Button variant="contained" className="button">
-                {" "}
-                Send
-              </Button>
-            </div>
+
+            <Button variant="contained" className="contact__button">
+              {' '}
+              Send
+            </Button>
+
             {message && <span>Thanks, I&apos;ll reply ASAP :</span>}
           </form>
         </div>

@@ -1,8 +1,7 @@
-@import '../../variable';
+@import '../../breakpoints';
 
-.testimonials {
-  height: 80vh;
-  padding: 3rem 0;
+.skills {
+  padding: 4rem 0;
   color: #fff;
   background-color: #050724;
   background-position: center;
@@ -13,115 +12,65 @@
   flex-direction: column;
   align-items: center;
 
-  @include mobile {
-    justify-content: space-around;
-  }
-
-  h1 {
+  &__title {
     font-size: 50px;
-
-    @include mobile {
-      font-size: 20px;
-    }
   }
 
-  .container {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .swiper {
+    width: 75%;
+    padding-top: 50px 0;
 
-    @include mobile {
+    &-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 231px;
+      background-color: #1e2835;
+      color: #1e2835;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px -8px black;
+      display: flex;
       flex-direction: column;
-      height: 100%;
-    }
-    .swiper {
-      width: 100%;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 317px;
-        height: 231px;
-        background-color: #1e2835;
-        color: #1e2835;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px -8px black;
+      justify-content: space-around;
+      padding: 20px;
+      transition: all 1s ease;
+
+      &__top {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 20px;
-        transition: all 1s ease;
+        position: absolute;
+        top: -80px;
+        left: 80px;
+        width: 150px;
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 6px;
 
-        @include mobile {
-          height: 180px;
-          margin: 10px 0;
-        }
-
-        &.featured {
+        .user {
+          object-fit: cover;
           margin: 0 30px;
-
-          @include mobile {
-            width: 250px;
-            height: 180px;
-            margin: 1px;
-          }
         }
+      }
 
-        &:hover {
-          transform: scale(1.1);
-        }
+      &__center {
+        padding: 10px;
+        border-radius: 10px;
+        color: rgb(121, 115, 115);
+      }
 
-        .top {
-          display: flex;
-          position: absolute;
-          top: -80px;
-          left: 80px;
-          width: 150px;
-          height: 250px;
-          align-items: center;
-          justify-content: center;
-          padding: 5px 6px;
+      &__bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
 
-          img {
-            &.user {
-              object-fit: cover;
-              margin: 0 30px;
-            }
-          }
-        }
-
-        .center {
-          padding: 10px;
-          border-radius: 10px;
+        h3 {
+          margin-bottom: 5px;
           color: rgb(121, 115, 115);
-
-          @include mobile {
-            font-size: 12px;
-            padding: 5px;
-          }
         }
-        .bottom {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
 
-          h3 {
-            margin-bottom: 5px;
-            color: rgb(121, 115, 115);
-            @include mobile {
-              font-size: 14px;
-            }
-          }
-          h4 {
-            color: rgb(121, 115, 115);
-            @include mobile {
-              font-size: 13px;
-            }
-          }
+        h4 {
+          color: rgb(121, 115, 115);
         }
       }
     }

@@ -1,127 +1,157 @@
 $default-border-color: transparent;
-$focus-border-color: #86ff00;
+@import '../../breakpoints';
+@import '../../variable';
+
+//====== button styles mixin==========//
+@mixin button-styles {
+  background-color: $primary-btn-background;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  font-weight: bold;
+  padding: 12px 30px;
+  color: #000;
+  &:hover {
+    background-color: $secondary-color;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+//===============ends here=============//
 
 .contact {
-  background-color: #09121d;
+  background-color: $primary-contact-bg-color;
   color: #ffffff;
   padding: 4rem 0;
   background-image: url('bg_project2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
-  h1 {
+.contact h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @include sm {
     font-size: 50px;
-    text-align: center;
   }
+}
 
-  // @include mobile {
-  //   flex-direction: column;
-  // }
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: auto;
 
-  .leftWrapper {
+  @include breakpoint(800px) {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
-    margin: auto;
-    .left {
-      flex: 1;
-      overflow: hidden;
-
-      img {
-        width: 390px;
-        height: 250px;
-      }
-    }
-    .right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      //width: 100%;
-
-      h2 {
-        font-size: 30px;
-      }
-
-      form {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-
-        input {
-          width: 300px;
-          height: 52px;
-          font-size: 18px;
-          background-color: #1e2835;
-          color: #798da3;
-          outline: none;
-          border: transparent;
-          padding: 9px 12px;
-          margin: 0 0 1rem 0;
-          border: 1px solid $default-border-color;
-          transition: border-color 0.3s ease;
-
-          &:focus {
-            border-color: $focus-border-color;
-            outline: none;
-          }
-        }
-
-        textarea {
-          width: 300px;
-          height: 200px;
-          font-size: 18px;
-          background-color: #1e2835;
-          color: #798da3;
-          outline: none;
-          padding: 9px 12px;
-          border: transparent;
-          margin: 0 0 1rem 0;
-          // @include mobile {
-          //   width: 200px;
-          //   height: 100px;
-          // }
-        }
-
-        .btn {
-          .button {
-            background-color: #86ff00;
-            clip-path: polygon(
-              0 0,
-              calc(100% - 10px) 0,
-              100% 10px,
-              100% 100%,
-              10px 100%,
-              0 calc(100% - 10px)
-            );
-            font-weight: bold;
-            padding: 12px 30px;
-            color: #000;
-            &:hover {
-              background-color: #798da3;
-              color: #fff;
-            }
-          }
-        }
-
-        // @include mobile {
-        //   margin-top: 10px;
-        // }
-
-        &:focus {
-          outline: none;
-        }
-      }
-
-      span {
-        color: green;
-      }
-    }
+    flex-direction: row;
   }
+}
+
+.contact__left {
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact__left img {
+  width: 390px;
+  height: 250px;
+}
+
+.contact__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__right h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  @include sm {
+    font-size: $font-size-medium;
+  }
+}
+
+.contact__right form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact__right input {
+  width: 173px;
+  height: 33px;
+  font-size: $contact-font-size;
+  background-color: $secondary-contact-bg-color;
+  color: $secondary-color;
+  outline: none;
+  border: transparent;
+  padding: 9px 12px;
+  margin: 0 0 1rem 0;
+  border: 1px solid $default-border-color;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: $hover-color;
+    outline: none;
+  }
+
+  @include sx {
+    width: 240px;
+    height: 38px;
+  }
+
+  @include sm {
+    width: 300px;
+    height: 52px;
+  }
+}
+
+.contact__right textarea {
+  width: 173px;
+  height: 168px;
+  font-size: $contact-font-size;
+  background-color: $secondary-contact-bg-color;
+  color: $secondary-color;
+  outline: none;
+  padding: 9px 12px;
+  border: transparent;
+  margin: 0 0 1rem 0;
+
+  @include sx {
+    width: 240px;
+    height: 138px;
+  }
+
+  @include sm {
+    width: 300px;
+    height: 168px;
+  }
+}
+
+.contact__right Button {
+  @include button-styles;
+}
+
+.contact__right span {
+  color: green;
 }
