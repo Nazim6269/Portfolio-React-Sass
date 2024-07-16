@@ -1,0 +1,51 @@
+@import '../../breakpoints';
+
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+
+  &__spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #000;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #333;
+
+    @include sx {
+      font-size: 1.2rem;
+    }
+
+    @include sm {
+      font-size: 1.5rem;
+    }
+
+    @include md {
+      font-size: 1.8rem;
+    }
+
+    @include lg {
+      font-size: 2rem;
+    }
+
+    @include xl {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
