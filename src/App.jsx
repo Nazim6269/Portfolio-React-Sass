@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import './app.scss';
 import Contact from './Components/contact/Contact';
 import Footer from './Components/footer/Footer';
@@ -7,14 +7,13 @@ import Projects from './Components/projects/Projects';
 import Skills from './Components/skills/Skills';
 import Topbar from './Components/topbar/Topbar';
 import Work from './Components/work/Work';
+import ThemeProvider, { useTheme } from './context/context';
 
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+function AppContent() {
   return (
     <div className="app">
-      {/* <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
       <div className="section">
-        <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Topbar />
         <Intro />
         <Projects />
         <Work />
@@ -23,6 +22,14 @@ function App() {
         <Footer />
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

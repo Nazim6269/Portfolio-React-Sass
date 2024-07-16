@@ -6,10 +6,12 @@ import {
   TiSocialTwitter,
 } from 'react-icons/ti';
 import './footer.scss'; // Assuming you save the SASS file as footer.scss
+import { useTheme } from '../../context/context';
 
 const Footer = () => {
+  const { theme } = useTheme();
   return (
-    <footer className="footer">
+    <footer className={`footer ${theme}`}>
       <div className="footer__content">
         <div className="footer__section footer__section--social">
           <h4 className="footer__title">Follow me</h4>

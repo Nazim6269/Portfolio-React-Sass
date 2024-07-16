@@ -4,10 +4,19 @@
 .skills {
   padding: 20px;
   text-align: center;
-  background-image: url('bg_slider.png');
+  background-image: url('bg-slider.png');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $mainColor;
+
+  &.light {
+    background-color: white;
+    color: black;
+  }
+
+  &.dark {
+    background-color: $mainColor;
+    color: white;
+  }
 }
 
 .skills__title {

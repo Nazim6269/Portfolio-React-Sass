@@ -25,12 +25,22 @@
 .intro {
   color: $primary-text-color;
   background-image: url('bg-slider.png');
-  background-color: #050724;
+
   z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
+
+  &.light {
+    background-color: white;
+    color: black;
+  }
+
+  &.dark {
+    background-color: #050724;
+    color: white;
+  }
 
   &__wrapper {
     width: 100%;

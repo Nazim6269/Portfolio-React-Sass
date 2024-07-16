@@ -1,10 +1,12 @@
 import React from 'react';
 import { skillsData } from '../../data.js';
 import './skills.scss'; // Updated to .scss
+import { useTheme } from '../../context/context.jsx';
 
 export default function Skills() {
+  const { theme } = useTheme();
   return (
-    <div className="skills">
+    <div className={`skills ${theme}`}>
       <h1 className="skills__title">Skills</h1>
 
       <div className="skills__container">

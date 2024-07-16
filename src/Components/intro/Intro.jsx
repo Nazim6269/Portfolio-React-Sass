@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import TypingAnimation from '../../utils/typingAnimation/TypingAnimagtion';
 import './intro.scss';
+import { useTheme } from '../../context/context';
 
 const Intro = () => {
+  const { theme } = useTheme();
   return (
-    <div className="intro" id="intro">
+    <div className={`intro ${theme}`} id="intro">
       <div className="intro__wrapper">
         {/* ===============left section========== */}
         <div className="intro__left">

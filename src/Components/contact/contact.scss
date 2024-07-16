@@ -28,13 +28,22 @@ $default-border-color: transparent;
 //===============ends here=============//
 
 .contact {
-  background-color: $primary-contact-bg-color;
   color: #ffffff;
   padding: 4rem 0;
   background-image: url('bg_project2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &.light {
+    background-color: white;
+    color: black;
+  }
+
+  &.dark {
+    background-color: $primary-contact-bg-color;
+    color: white;
+  }
 }
 
 .contact h1 {

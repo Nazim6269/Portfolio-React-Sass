@@ -2,9 +2,11 @@ import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import './contact.scss';
+import { useTheme } from '../../context/context';
 
 export default function Contact() {
   const [message, setMessage] = useState(false);
+  const { theme } = useTheme();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +14,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="contact" id="contact">
+    <div className={`contact ${theme}`} id="contact">
       <h1>Get Contact</h1>
       <div className="contact__wrapper">
         <div className="contact__left">

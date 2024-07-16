@@ -10,9 +10,12 @@ import {
 } from '../../data';
 import PortfolioList from '../projectList/ProjectsList';
 
+import { useTheme } from '../../context/context';
+
 export default function Projects() {
   const [selected, setSelected] = useState('featured');
   const [data, setData] = useState([]);
+  const { theme } = useTheme();
 
   useEffect(() => {
     switch (selected) {
@@ -37,7 +40,7 @@ export default function Projects() {
   }, [selected]);
 
   return (
-    <div className="projects" id="projects">
+    <div className={`projects ${theme}`} id="projects">
       <h1>Projects</h1>
       <ul>
         {projectList.map((item) => (
