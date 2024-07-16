@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
-import './projects.scss';
 import {
-  featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
   contentPortfolio,
+  designPortfolio,
+  featuredPortfolio,
+  mobilePortfolio,
   projectList,
+  webPortfolio,
 } from '../../data';
 import PortfolioList from '../projectList/ProjectsList';
+import './projects.scss';
 
+import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/context';
 
 export default function Projects() {
@@ -56,7 +57,9 @@ export default function Projects() {
       <div className="projects__container">
         {data.map((item) => (
           <div key={item.id} className="projects__item">
-            <img src={item.img} alt={item.title} />
+            <Link to={`${item.id}`}>
+              <img src={item.img} alt={item.title} />
+            </Link>
             <h3>{item.title}</h3>
           </div>
         ))}

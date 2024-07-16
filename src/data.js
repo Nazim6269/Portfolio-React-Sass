@@ -283,3 +283,26 @@ export const navArray = [
   { id: 4, path: '/skills', name: 'Skills' },
   { id: 5, path: '/contact', name: 'Contact' },
 ];
+
+export const projectsData = [
+  {
+    id: 1,
+    title: 'Dreams Food',
+    description:
+      'In this project i try to implement various functionality through, react, node.js, mongoDB and express.js',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+    screenshots: ['bg-slider.png', 'bg-slider.png'],
+    demoLink: 'https://example.com/demo',
+    githubLink: 'https://github.com/Nazim6269/Dreams_Food-MERN',
+  },
+  {
+    id: 2,
+    title: 'Expense Tracker',
+    description:
+      'In this project i try to implement various functionality through, react, ',
+    technologies: ['React', 'Express', 'MongoDB'],
+    screenshots: ['bg-slider.png', 'bg-slider.png'],
+    demoLink: 'https://context-api-expensetracker6269.netlify.app/',
+    githubLink: 'https://github.com/Nazim6269/Expense_Tracker_Context_Api',
+  },
+];
