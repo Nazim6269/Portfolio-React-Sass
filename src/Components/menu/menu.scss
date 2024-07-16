@@ -1,40 +1,39 @@
 @import '../../breakpoints';
 
-.menu {
-  ul {
-    list-style: none;
-    font-size: 18px;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu ul {
+  list-style: none;
+  font-size: 18px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    li {
-      margin-bottom: 25px;
-      font-weight: bold;
-      margin: auto 6px;
+.menu ul li {
+  margin-bottom: 25px;
+  font-weight: bold;
+  margin: auto 6px;
 
-      Link {
-        font-size: inherit;
-        color: inherit;
-        text-decoration: none;
-      }
-      &.light {
-        color: black;
-      }
+  &.light {
+    color: black;
+  }
 
-      &.dark {
-        color: white;
-      }
+  &.dark {
+    color: white;
+  }
+}
 
-      @include xl {
-        font-size: 15px;
-      }
+.menu ul li a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
 
-      &:hover {
-        font-weight: 500;
-        color: #86ff00;
-      }
-    }
+  &:hover {
+    font-weight: 500;
+    color: #86ff00;
+  }
+
+  @include xl {
+    font-size: 15px;
   }
 }

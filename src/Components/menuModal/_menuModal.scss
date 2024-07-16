@@ -1,0 +1,38 @@
+.menu-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    &-item {
+      margin: 10px 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #86ff00;
+        }
+      }
+    }
+  }
+
+  .MuiButton-root {
+    margin-top: 20px;
+  }
+}

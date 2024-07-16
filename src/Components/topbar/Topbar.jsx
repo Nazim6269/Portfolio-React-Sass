@@ -1,13 +1,17 @@
 import { Mail, Person } from '@mui/icons-material';
 import { Button } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/context';
 import Menu from '../menu/Menu';
+import MenuModal from '../menuModal/MenuModal';
 import ThemeSwitch from '../themeSwitch/ThemeSwitch';
 import './topbar.scss';
 
 const Topbar = () => {
   const { theme, toggleTheme } = useTheme();
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className={`topbar ${theme}`}>
@@ -16,9 +20,9 @@ const Topbar = () => {
         <div className="topbar__wrapper__left">
           <div>
             {' '}
-            <a href="#intro" className="topbar__wrapper__left__logo">
+            <Link to={'/'} className="topbar__wrapper__left__logo">
               Pro.
-            </a>
+            </Link>
           </div>
           <div className="topbar__wrapper__left__item-container">
             <Person className="icon" />
@@ -47,12 +51,20 @@ const Topbar = () => {
         </div>
 
         <div className="topbar__wrapper__right">
-          <div className={`topbar__wrapper__right__hamburger ${theme}`}>
+          <div
+            className={`topbar__wrapper__right__hamburger ${theme}`}
+            onClick={() => setShowModal(true)}
+          >
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
           </div>
         </div>
+        {showModal &&
+          createPortal(
+            <MenuModal onClose={() => setShowModal(false)} />,
+            document.getElementById('modal-root'),
+          )}
       </div>
     </div>
   );

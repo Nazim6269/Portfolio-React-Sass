@@ -1,28 +1,20 @@
 import React from 'react';
-import './menu.scss';
-import { useTheme } from '../../context/context';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../context/context';
+import { navArray } from '../../data';
+import './menu.scss';
 
 const Menu = () => {
   const { theme } = useTheme();
+
   return (
     <div className={`menu ${theme}`}>
       <ul>
-        <li>
-          <Link to={'/'}>Home</Link>
-        </li>
-
-        <li>
-          <Link to={'/projects'}>Projects</Link>
-        </li>
-
-        <li>
-          <Link to={'/work'}>Work</Link>
-        </li>
-
-        <li>
-          <Link to={'/skills'}>Skills</Link>
-        </li>
+        {navArray.map((item) => (
+          <li key={item.id}>
+            <Link to={item.path}>{item.name}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
