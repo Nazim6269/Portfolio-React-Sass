@@ -1,0 +1,71 @@
+@import '../../breakpoints';
+
+.page-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  &__content {
+    max-width: 600px;
+
+    @include md {
+      max-width: 800px;
+    }
+
+    @include lg {
+      max-width: 1000px;
+    }
+  }
+
+  &__title {
+    font-size: 72px;
+    margin-bottom: 20px;
+
+    @include sm {
+      font-size: 96px;
+    }
+
+    @include md {
+      font-size: 10rem;
+    }
+  }
+
+  &__message {
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    @include sm {
+      font-size: 20px;
+    }
+
+    @include md {
+      font-size: 24px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+
+    @include sm {
+      font-size: 18px;
+    }
+
+    @include md {
+      font-size: 20px;
+    }
+  }
+}

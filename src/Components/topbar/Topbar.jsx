@@ -39,7 +39,7 @@ const Topbar = () => {
         {/* ======== Middle portion ============= */}
 
         <div>
-          <ThemeSwitch onClick={toggleTheme} />
+          <ThemeSwitch theme={theme} onClick={toggleTheme} />
         </div>
 
         <div className="topbar__wrapper__middle">
@@ -47,7 +47,7 @@ const Topbar = () => {
         </div>
 
         <div className="topbar__wrapper__right">
-          <div className="topbar__wrapper__right__hamburger">
+          <div className={`topbar__wrapper__right__hamburger ${theme}`}>
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>

@@ -1,13 +1,13 @@
 @import '../../breakpoints';
 
 .footer {
-  color: #fff;
+  //color: #fff;
   background-image: url('bg_project2.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: auto;
-  color: #fff;
+  // color: #fff;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -105,8 +105,15 @@
 }
 
 .footer__link {
-  color: #fff;
   text-decoration: none;
+
+  &.light {
+    color: black;
+  }
+
+  &.dark {
+    color: white;
+  }
 
   &:hover {
     text-decoration: underline;

@@ -1,34 +1,33 @@
 import React from 'react';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from 'react-router-dom';
 import './app.scss';
-import Contact from './Components/contact/Contact';
-import Footer from './Components/footer/Footer';
-import Intro from './Components/intro/Intro';
 import Projects from './Components/projects/Projects';
 import Skills from './Components/skills/Skills';
-import Topbar from './Components/topbar/Topbar';
-import Work from './Components/work/Work';
-import ThemeProvider, { useTheme } from './context/context';
+import ThemeProvider from './context/context';
+import RootLayout from './layout/RootLayout';
+import Error from './screens/error/Error';
+import Home from './screens/home/Home';
 
-function AppContent() {
-  return (
-    <div className="app">
-      <div className="section">
-        <Topbar />
-        <Intro />
-        <Projects />
-        <Work />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
-    </div>
-  );
-}
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="skills" element={<Skills />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="*" element={<Error />} />
+    </Route>,
+  ),
+);
 
 function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }

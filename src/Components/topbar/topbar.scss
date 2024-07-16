@@ -127,6 +127,14 @@
             background-color: $primary-text-color;
             transform-origin: left;
             transition: all 2s ease;
+
+            &.light {
+              background-color: black;
+            }
+
+            &.dark {
+              background-color: white;
+            }
           }
         }
         @include md {
@@ -137,25 +145,26 @@
         }
       }
     }
-    &.active {
-      background-color: $mainColor;
-      color: #fff;
 
-      .hamburger {
-        span {
-          &:first-child {
-            background-color: #fff;
-            transform: rotate(45deg);
-          }
-          &:nth-child(2) {
-            opacity: 0;
-          }
-          &:last-child {
-            background-color: #fff;
-            transform: rotate(-45deg);
-          }
-        }
-      }
-    }
+    // &.active {
+    //   background-color: $mainColor;
+    //   color: #fff;
+
+    //   .hamburger {
+    //     span {
+    //       &:first-child {
+    //         background-color: #fff;
+    //         transform: rotate(45deg);
+    //       }
+    //       &:nth-child(2) {
+    //         opacity: 0;
+    //       }
+    //       &:last-child {
+    //         background-color: #fff;
+    //         transform: rotate(-45deg);
+    //       }
+    //     }
+    //   }
+    // }
   }
 }

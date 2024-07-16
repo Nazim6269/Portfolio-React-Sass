@@ -1,16 +1,6 @@
 .app {
   height: 100vh;
 
-  &.light {
-    background-color: white;
-    color: black;
-  }
-
-  &.dark {
-    background-color: black;
-    color: white;
-  }
-
   .section {
     width: 100%;
     // height: calc(100vh - 70px);
