@@ -281,4 +281,5 @@ export const navArray = [
   { id: 2, path: '/projects', name: 'Projects' },
   { id: 3, path: '/about', name: 'About' },
   { id: 4, path: '/skills', name: 'Skills' },
+  { id: 5, path: '/contact', name: 'Contact' },
 ];

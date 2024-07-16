@@ -10,7 +10,9 @@ const RootLayout = () => {
       <main>
         <Outlet />
       </main>
-      <Footer />
+      <Footer
+        location={'Al falah goli, sholo-shohor, Chittagong, Bangladesh'}
+      />
     </>
   );
 };
