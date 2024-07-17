@@ -5,3 +5,4 @@
 #Problem3: Routing with createBrowserRouter() instead of BrowserRouter component
 #Problem4: Lazy loading
 #Problem5: modal using createPortal()
+#Problem6: image downloading from site through html2canvas

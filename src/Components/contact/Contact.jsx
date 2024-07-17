@@ -1,16 +1,46 @@
+import emailjs from '@emailjs/browser';
 import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import './contact.scss';
 import { useTheme } from '../../context/context';
+import { publicKey, serviceID, templateID } from '../../secret';
+import './contact.scss';
 
 export default function Contact() {
-  const [message, setMessage] = useState(false);
   const { theme } = useTheme();
+  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage(true);
+
+    try {
+      const res = await emailjs.send(
+        serviceID,
+        templateID,
+        formData,
+        publicKey,
+      );
+      setFormData((prev) => ({
+        ...prev,
+        [e.target.name]: '',
+      }));
+
+      setMessage('Message sent successfully');
+    } catch (error) {
+      alert('Failed to send message, please try again later');
+    }
   };
 
   return (
@@ -32,15 +62,37 @@ export default function Contact() {
         <div className="contact__right">
           <h2>Contact</h2>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Email" />
-            <textarea placeholder="Message"></textarea>
+            <input
+              type="text"
+              placeholder="Your Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              placeholder="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <textarea
+              placeholder="Message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+            />
 
-            <Button variant="contained" className="contact__button">
+            <Button
+              variant="contained"
+              type="submit"
+              className="contact__button"
+            >
               {' '}
               Send
             </Button>
 
-            {message && <span>Thanks, I&apos;ll reply ASAP :</span>}
+            {message && <span>{message}</span>}
           </form>
         </div>
       </div>
