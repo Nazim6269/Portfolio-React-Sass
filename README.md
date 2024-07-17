@@ -6,3 +6,4 @@
 #Problem4: Lazy loading
 #Problem5: modal using createPortal()
 #Problem6: image downloading from site through html2canvas
+#Problem7: sending email with emailjs (useState and useRef hooks)

@@ -1,12 +1,17 @@
-import "./projectList.scss";
+import './projectList.scss';
 
-export default function ProjectsList({ id, title, active, setSelected }) {
+export default function ProjectsList({
+  id,
+  category,
+  active,
+  setSelectCategory,
+}) {
   return (
     <h3
-      className={active ? "portfolioList active" : "portfolioList"}
-      onClick={() => setSelected(id)}
+      className={active ? 'portfolioList active' : 'portfolioList'}
+      onClick={() => setSelectCategory(category)}
     >
-      {title}
+      {category}
     </h3>
   );
 }

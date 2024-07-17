@@ -1,61 +1,34 @@
-import { useEffect, useState } from 'react';
-import {
-  contentPortfolio,
-  designPortfolio,
-  featuredPortfolio,
-  mobilePortfolio,
-  projectList,
-  webPortfolio,
-} from '../../data';
-import PortfolioList from '../projectList/ProjectsList';
-import './projects.scss';
-
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/context';
+import { projectsData } from '../../data';
+import ProjectsList from '../projectList/ProjectsList';
+import './projects.scss';
 
 export default function Projects() {
-  const [selected, setSelected] = useState('featured');
-  const [data, setData] = useState([]);
+  const [selectCategory, setSelectCategory] = useState('NextJS');
   const { theme } = useTheme();
-
-  useEffect(() => {
-    switch (selected) {
-      case 'featured':
-        setData(featuredPortfolio);
-        break;
-      case 'web':
-        setData(webPortfolio);
-        break;
-      case 'mobile':
-        setData(mobilePortfolio);
-        break;
-      case 'design':
-        setData(designPortfolio);
-        break;
-      case 'content':
-        setData(contentPortfolio);
-        break;
-      default:
-        setData(featuredPortfolio);
-    }
-  }, [selected]);
+  const filteredData = projectsData.filter(
+    (item) => item.category === selectCategory,
+  );
+  if (!filteredData) return;
 
   return (
     <div className={`projects ${theme}`} id="projects">
       <h1>Projects</h1>
       <ul>
-        {projectList.map((item) => (
-          <PortfolioList
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected}
+        {projectsData.map((item) => (
+          <ProjectsList
+            category={item.category}
+            active={selectCategory === item.id}
+            setSelectCategory={setSelectCategory}
             key={item.id}
             id={item.id}
           />
         ))}
       </ul>
       <div className="projects__container">
-        {data.map((item) => (
+        {filteredData.map((item) => (
           <Link to={`${item.id}`} key={item.id} className="projects__item">
             <div>
               <img src={item.img} alt={item.title} />
