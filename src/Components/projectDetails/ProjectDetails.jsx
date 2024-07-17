@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import { projectsData } from '../../data';
+import ImageModal from '../imageModal/ImageModal';
 import './_projectDetails.scss';
 
 const ProjectDetailsPage = () => {
   const { projectId } = useParams();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const project = projectsData.find(
     (project) => project.id.toString() === projectId,
@@ -25,6 +27,14 @@ const ProjectDetailsPage = () => {
     githubLink,
   } = project;
 
+  const handleSSClick = (imgSrc) => {
+    setSelectedImage(imgSrc);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <div className="project-details">
       <h2>{title}</h2>
@@ -40,7 +50,12 @@ const ProjectDetailsPage = () => {
       <h3>Screenshots:</h3>
       <div className="screenshots">
         {screenshots.map((screenshot) => (
-          <img key={id} src={screenshot} alt={`Screenshot ${id + 1}`} />
+          <img
+            key={id}
+            src={screenshot}
+            alt={`Screenshot ${id + 1}`}
+            onClick={() => handleSSClick(screenshot)}
+          />
         ))}
       </div>
 
@@ -54,6 +69,10 @@ const ProjectDetailsPage = () => {
         <div>
           <Link to={githubLink}>GitHub Repository</Link>
         </div>
+      )}
+
+      {selectedImage && (
+        <ImageModal imageSrc={selectedImage} onClose={closeModal} />
       )}
     </div>
   );

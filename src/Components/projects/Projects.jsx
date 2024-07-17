@@ -56,12 +56,12 @@ export default function Projects() {
       </ul>
       <div className="projects__container">
         {data.map((item) => (
-          <div key={item.id} className="projects__item">
-            <Link to={`${item.id}`}>
+          <Link to={`${item.id}`} key={item.id} className="projects__item">
+            <div>
               <img src={item.img} alt={item.title} />
-            </Link>
+            </div>
             <h3>{item.title}</h3>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
