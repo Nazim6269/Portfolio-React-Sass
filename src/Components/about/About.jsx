@@ -1,6 +1,8 @@
 import React from 'react';
 import './_about.scss';
 
+//TODO: Add Education part;
+
 const About = () => {
   return (
     <div className="about">
