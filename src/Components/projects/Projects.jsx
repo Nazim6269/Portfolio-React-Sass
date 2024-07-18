@@ -6,7 +6,7 @@ import ProjectsList from '../projectList/ProjectsList';
 import './projects.scss';
 
 export default function Projects() {
-  const [selectCategory, setSelectCategory] = useState('NextJS');
+  const [selectCategory, setSelectCategory] = useState('MERN');
   const { theme } = useTheme();
   const filteredData = projectsData.filter(
     (item) => item.category === selectCategory,
@@ -20,7 +20,7 @@ export default function Projects() {
         {projectsData.map((item) => (
           <ProjectsList
             category={item.category}
-            active={selectCategory === item.id}
+            active={selectCategory === item.category}
             setSelectCategory={setSelectCategory}
             key={item.id}
             id={item.id}
