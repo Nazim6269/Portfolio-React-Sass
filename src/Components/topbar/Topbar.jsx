@@ -32,12 +32,12 @@ const Topbar = () => {
             <Mail className="topbar__wrapper__left__item-container__icon" />
             <span>nazimuddin@gmail.com</span>
           </div>
-          <div className="topbar__wrapper__left__btn">
+          {/* <div className="topbar__wrapper__left__btn">
             <Button variant="contained" className="button">
               {' '}
               Contact
             </Button>
-          </div>
+          </div> */}
         </div>
 
         {/* ======== Middle portion ============= */}

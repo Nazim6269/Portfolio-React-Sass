@@ -48,7 +48,11 @@ const Intro = () => {
               duration: 5,
             }}
           >
-            <img className="intro__ninjaIcon" src="icon_1.png" alt="Icon X" />
+            <img
+              className="intro__ninjaIcon"
+              src="/introImage/icon_1.png"
+              alt="Icon X"
+            />
           </motion.div>
           <motion.div
             animate={{ y: 100 }}
@@ -58,7 +62,11 @@ const Intro = () => {
               duration: 7,
             }}
           >
-            <img className="intro__planeIcon" src="Furore.png" alt="Icon Y" />
+            <img
+              className="intro__planeIcon"
+              src="/introImage/Furore.png"
+              alt="Icon Y"
+            />
           </motion.div>
           <motion.div
             animate={{ x: 100 }}
@@ -70,7 +78,7 @@ const Intro = () => {
           >
             <img
               className="intro__cartoonIcon"
-              src="icon_3.png"
+              src="/introImage/icon_3.png"
               alt="Icon Rotate"
             />
           </motion.div>

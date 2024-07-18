@@ -3,8 +3,8 @@
 In this project I try to implement various functionality using reactJS.
 
 # Demo
-(https://portfolio-react-sass-lake.vercel.app/)
 
+(https://portfolio-react-sass-lake.vercel.app/)
 
 # Table of Contents
 
@@ -58,6 +58,8 @@ Install with npm
 # Tech Stack
 
 - React
+- SASS
+- BEM architecture
 - react-router-dom
 - MaterialUI
 - Formik

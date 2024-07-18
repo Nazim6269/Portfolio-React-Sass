@@ -49,7 +49,7 @@ export default function Contact() {
               duration: 8,
               ease: 'linear',
             }}
-            src="reactNoBackground.png"
+            src="/contactImage/reactNoBackground.png"
             alt=""
           />
         </div>
