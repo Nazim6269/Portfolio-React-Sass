@@ -1,10 +1,10 @@
 # Portfolio Project
 
-# Demo
+In this project I try to implement various functionality using reactJS.
 
+# Demo
 (https://portfolio-react-sass-lake.vercel.app/)
 
-In this project I try to implement various functionality using reactJS.
 
 # Table of Contents
 
