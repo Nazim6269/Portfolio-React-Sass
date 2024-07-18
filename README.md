@@ -57,19 +57,24 @@ Install with npm
 
 # Tech Stack
 
-**Client:** React react-router-dom, MaterialUI, Formik, html2canvas, framer motion
+- React
+- react-router-dom
+- MaterialUI
+- Formik
+- html2canvas
+- framer motion
 
 # Which problems i faced during this project?
 
-#Problem1: Theme switch position when refresh.
-#Problem2: Styles in Link of react-router-dom.
-#Problem3: Routing with createBrowserRouter() instead of BrowserRouter component
-#Problem4: Lazy loading
-#Problem5: modal using createPortal()
-#Problem6: image downloading from site through html2canvas
-#Problem7: sending email with emailjs (useState and useRef hooks)
-#Problem8: Form handling using "Formik"
-#Problem9: CV download option
+- #Problem1: Theme switch position when refresh.
+- #Problem2: Styles in Link of react-router-dom.
+- #Problem3: Routing with createBrowserRouter() instead of BrowserRouter component
+- #Problem4: Lazy loading
+- #Problem5: modal using createPortal()
+- #Problem6: image downloading from site through html2canvas
+- #Problem7: sending email with emailjs (useState and useRef hooks)
+- #Problem8: Form handling using "Formik"
+- #Problem9: CV download option
 
 # Project architecture
 
@@ -105,7 +110,6 @@ Install with npm
 ## 🚀 About Me
 
 I'm a Junior Front End developer...
-
 https://github.com/Nazim6269
 
 ## 🛠 Skills
