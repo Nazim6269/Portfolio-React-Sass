@@ -1,12 +1,16 @@
 import { Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import React from 'react';
+import { useTheme } from '../../context/context';
 import TypingAnimation from '../../utils/typingAnimation/TypingAnimagtion';
 import './intro.scss';
-import { useTheme } from '../../context/context';
 
 const Intro = () => {
   const { theme } = useTheme();
+
+  const handleDownload = () => {
+    window.open('Resume.pdf', '_blank');
+  };
   return (
     <div className={`intro ${theme}`} id="intro">
       <div className="intro__wrapper">
@@ -22,9 +26,13 @@ const Intro = () => {
               </span>
             </h3>
             <div className="intro__btn">
-              <Button variant="contained" className="button">
+              <Button
+                variant="contained"
+                className="button"
+                onClick={handleDownload}
+              >
                 {' '}
-                Contact
+                Download CV
               </Button>
             </div>
           </div>
