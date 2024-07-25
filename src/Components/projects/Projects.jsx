@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/context';
 import { projectsData } from '../../data';
 import ProjectsList from '../projectList/ProjectsList';
@@ -16,8 +16,7 @@ export default function Projects() {
 
   if (!filteredData) return;
 
-  const handleImageClick = (itemId, category) => {
-    console.log(category);
+  const handleClick = (itemId, category) => {
     navigate(`/projects/${category}/${itemId}`);
   };
 
@@ -38,12 +37,8 @@ export default function Projects() {
       <div className="projects__container">
         {filteredData[0]?.data?.map((item) => (
           <div key={item.id} className="projects__item">
-            <div>
-              <img
-                src={item.img}
-                alt={item.title}
-                onClick={() => handleImageClick(item.id, selectCategory)}
-              />
+            <div onClick={() => handleClick(item.id, selectCategory)}>
+              <img src={item.screenshots[0]} alt={item.title} />
             </div>
             <h3>{item.title}</h3>
           </div>
