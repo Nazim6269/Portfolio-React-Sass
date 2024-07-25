@@ -96,7 +96,7 @@ export const navArray = [
   { id: 5, path: '/contact', name: 'Contact' },
 ];
 
-export const projectsData = [
+export const projectsData2 = [
   {
     id: 1,
     category: 'NextJS',
@@ -148,7 +148,7 @@ export const projectsData = [
     githubLink: 'github.io',
   },
   {
-    id: 4,
+    id: 5,
     category: 'MERN',
     title: 'E-commerce Web Design',
     img: 'https://cdn.dribbble.com/users/1387827/screenshots/15466426/media/deb2dca6762cd3610321c98bfccb0b72.png?compress=1&resize=1200x900',
@@ -159,7 +159,7 @@ export const projectsData = [
     githubLink: 'github.io',
   },
   {
-    id: 5,
+    id: 6,
     category: 'NextJS',
     title: 'Relax Mobile App',
     img: 'https://cdn.dribbble.com/users/4095861/screenshots/15467417/media/d6a15c416626f12b31fa5ca1db192572.png?compress=1&resize=1200x900',
@@ -170,7 +170,7 @@ export const projectsData = [
     githubLink: 'github.io',
   },
   {
-    id: 6,
+    id: 7,
     category: 'NextJS',
     title: 'Hero Web Design',
     img: 'https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900',
@@ -181,7 +181,7 @@ export const projectsData = [
     githubLink: 'github.io',
   },
   {
-    id: 7,
+    id: 8,
     category: 'NextJS',
     title: 'Banking App',
     img: 'https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900',
@@ -190,5 +190,124 @@ export const projectsData = [
     screenshots: ['abc.jpg', 'xyz.png'],
     demoLink: 'ab.com',
     githubLink: 'github.io',
+  },
+];
+
+export const projectsData = [
+  {
+    id: 1,
+    category: 'NextJS',
+    data: [
+      {
+        id: 1,
+        title: 'Dreams Food',
+        description:
+          'In this project i try to implement various functionality through, react, node.js, mongoDB and express.js',
+        technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+        screenshots: [
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU',
+        ],
+        demoLink: 'https://example.com/demo',
+        githubLink: 'https://github.com/Nazim6269/Dreams_Food-MERN',
+      },
+      {
+        id: 2,
+        title: 'Relax Mobile App',
+        img: 'https://cdn.dribbble.com/users/4095861/screenshots/15467417/media/d6a15c416626f12b31fa5ca1db192572.png?compress=1&resize=1200x900',
+        description: 'lorem',
+        technologies: ['react,nextjs,tailwindcss'],
+        screenshots: ['abc.jpg', 'xyz.png'],
+        demoLink: 'ab.com',
+        githubLink: 'github.io',
+      },
+      {
+        id: 6,
+        title: 'Hero Web Design',
+        img: 'https://cdn.dribbble.com/users/5031392/screenshots/15467520/media/c36b3b15b25b1e190d081abdbbf947cf.png?compress=1&resize=1200x900',
+        description: 'lorem',
+        technologies: ['react,nextjs,tailwindcss'],
+        screenshots: ['abc.jpg', 'xyz.png'],
+        demoLink: 'ab.com',
+        githubLink: 'github.io',
+      },
+      {
+        id: 7,
+        title: 'Banking App',
+        img: 'https://cdn.dribbble.com/users/3307260/screenshots/15468444/media/447b4501f7a145b05e11c70199a9c417.jpg?compress=1&resize=1200x900',
+        description: 'lorem',
+        technologies: ['react,nextjs,tailwindcss'],
+        screenshots: ['abc.jpg', 'xyz.png'],
+        demoLink: 'ab.com',
+        githubLink: 'github.io',
+      },
+    ],
+  },
+  {
+    id: 2,
+    category: 'ReactJS',
+    data: [
+      {
+        id: 1,
+        title: 'Expense Tracker',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'Express', 'MongoDB'],
+        screenshots: [
+          '/projectImages/ssExpenseTracker.png',
+          '/projectImages/ssExpenseTracker.png',
+        ],
+        demoLink: 'https://context-api-expensetracker6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/Expense_Tracker_Context_Api',
+      },
+    ],
+  },
+  {
+    id: 3,
+    category: 'HTML-CSS',
+    data: [
+      {
+        id: 1,
+        title: 'Social Media App',
+        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU',
+        description: 'lorem',
+        technologies: ['react,nextjs,tailwindcss'],
+        screenshots: ['abc.jpg', 'xyz.png'],
+        demoLink: 'ab.com',
+        githubLink: 'github.io',
+      },
+    ],
+  },
+  {
+    id: 4,
+    category: 'Random',
+    data: [
+      {
+        id: 1,
+        title: 'Rampa UI Design',
+        img: 'https://cdn.dribbble.com/users/702789/screenshots/15054318/media/4ea5d492b7b07eebc9528ff960794879.png?compress=1&resize=1200x900',
+        description: 'lorem',
+        technologies: ['react,nextjs,tailwindcss'],
+        screenshots: ['abc.jpg', 'xyz.png'],
+        demoLink: 'ab.com',
+        githubLink: 'github.io',
+      },
+    ],
+  },
+  {
+    id: 4,
+    category: 'MERN',
+    data: [
+      {
+        id: 1,
+        title: 'E-commerce Web Design',
+        img: 'https://cdn.dribbble.com/users/1387827/screenshots/15466426/media/deb2dca6762cd3610321c98bfccb0b72.png?compress=1&resize=1200x900',
+        description: 'lorem',
+        technologies: ['react,nextjs,tailwindcss'],
+        screenshots: ['abc.jpg', 'xyz.png'],
+        demoLink: 'ab.com',
+        githubLink: 'github.io',
+      },
+    ],
   },
 ];

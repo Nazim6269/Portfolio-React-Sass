@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-
 import { projectsData } from '../../data';
 import ImageModal from '../imageModal/ImageModal';
 import './_projectDetails.scss';
 
 const ProjectDetailsPage = () => {
-  const { projectId } = useParams();
+  const { projectId, category } = useParams();
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const project = projectsData.find(
-    (project) => project.id.toString() === projectId,
+  const cataogorizedData = projectsData.reduce((acc, cur) => {
+    if (cur.category === category) {
+      acc.push(...cur.data);
+    }
+    return acc;
+  }, []);
+
+  const project = cataogorizedData?.find(
+    (project) => project?.id?.toString() === projectId,
   );
 
   if (!project) {
@@ -18,11 +24,11 @@ const ProjectDetailsPage = () => {
   }
 
   const {
-    id,
     title,
-    description,
     technologies,
     screenshots,
+    description,
+    id,
     demoLink,
     githubLink,
   } = project;
@@ -42,14 +48,14 @@ const ProjectDetailsPage = () => {
 
       <h3>Technologies Used:</h3>
       <ul>
-        {technologies.map((tech) => (
+        {technologies?.map((tech) => (
           <li key={id}>{tech}</li>
         ))}
       </ul>
 
       <h3>Screenshots:</h3>
       <div className="screenshots">
-        {screenshots.map((screenshot) => (
+        {screenshots?.map((screenshot) => (
           <img
             key={id}
             src={screenshot}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/context';
 import { projectsData } from '../../data';
 import ProjectsList from '../projectList/ProjectsList';
@@ -8,10 +8,18 @@ import './projects.scss';
 export default function Projects() {
   const [selectCategory, setSelectCategory] = useState('MERN');
   const { theme } = useTheme();
+  const navigate = useNavigate();
+
   const filteredData = projectsData.filter(
     (item) => item.category === selectCategory,
   );
+
   if (!filteredData) return;
+
+  const handleImageClick = (itemId, category) => {
+    console.log(category);
+    navigate(`/projects/${category}/${itemId}`);
+  };
 
   return (
     <div className={`projects ${theme}`} id="projects">
@@ -28,13 +36,17 @@ export default function Projects() {
         ))}
       </ul>
       <div className="projects__container">
-        {filteredData.map((item) => (
-          <Link to={`${item.id}`} key={item.id} className="projects__item">
+        {filteredData[0]?.data?.map((item) => (
+          <div key={item.id} className="projects__item">
             <div>
-              <img src={item.img} alt={item.title} />
+              <img
+                src={item.img}
+                alt={item.title}
+                onClick={() => handleImageClick(item.id, selectCategory)}
+              />
             </div>
             <h3>{item.title}</h3>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

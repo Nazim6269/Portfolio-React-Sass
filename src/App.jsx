@@ -68,7 +68,7 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="projects/:projectId"
+        path="projects/:category/:projectId"
         element={
           <Suspense fallback={<Loading />}>
             <ProjectDetails />
