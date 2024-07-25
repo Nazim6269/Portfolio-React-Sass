@@ -45,44 +45,46 @@ const ProjectDetailsPage = () => {
   };
 
   return (
-    <div className="project-details">
-      <h2>{title}</h2>
-      <p>{description}</p>
+    <div className="project-details-container">
+      <div className="project-details">
+        <h2>{title}</h2>
+        <p>{description}</p>
 
-      <h3>Technologies Used:</h3>
-      <ul>
-        {technologies?.map((tech) => (
-          <li key={id}>{tech}</li>
-        ))}
-      </ul>
+        <h3>Technologies Used:</h3>
+        <ul>
+          {technologies?.map((tech) => (
+            <li key={id}>{tech}</li>
+          ))}
+        </ul>
 
-      <h3>Screenshots:</h3>
-      <div className="screenshots">
-        {screenshots?.map((screenshot) => (
-          <img
-            key={id}
-            src={screenshot}
-            alt={`Screenshot ${id + 1}`}
-            onClick={() => handleSSClick(screenshot)}
-          />
-        ))}
+        <h3>Screenshots:</h3>
+        <div className="screenshots">
+          {screenshots?.map((screenshot) => (
+            <img
+              key={id}
+              src={screenshot}
+              alt={`Screenshot ${id + 1}`}
+              onClick={() => handleSSClick(screenshot)}
+            />
+          ))}
+        </div>
+
+        {demoLink && (
+          <div>
+            <Link to={demoLink}>Live Demo</Link>
+          </div>
+        )}
+
+        {githubLink && (
+          <div>
+            <Link to={githubLink}>GitHub Repository</Link>
+          </div>
+        )}
+
+        {selectedImage && (
+          <ImageModal imageSrc={selectedImage} onClose={closeModal} />
+        )}
       </div>
-
-      {demoLink && (
-        <div>
-          <Link to={demoLink}>Live Demo</Link>
-        </div>
-      )}
-
-      {githubLink && (
-        <div>
-          <Link to={githubLink}>GitHub Repository</Link>
-        </div>
-      )}
-
-      {selectedImage && (
-        <ImageModal imageSrc={selectedImage} onClose={closeModal} />
-      )}
     </div>
   );
 };

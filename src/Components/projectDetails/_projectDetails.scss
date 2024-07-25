@@ -1,7 +1,13 @@
+@import '../../variable';
+
+.project-details-container {
+  background-color: $primary-bg-color-details;
+}
 .project-details {
-  max-width: 800px;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 0;
+  //color: $primary-text-color;
   height: 100vh;
 
   h2 {

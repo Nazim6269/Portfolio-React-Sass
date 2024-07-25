@@ -146,6 +146,73 @@ export const projectsData = [
         demoLink: 'https://travel-app-woad-xi.vercel.app/',
         githubLink: 'https://github.com/Nazim6269/Travel_App',
       },
+      {
+        id: 3,
+        title: 'Counter App Two',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/counter-react-redux/react-reduxSS.png',
+          '/projectImages/counter-react-redux/react-reduxSS.png',
+        ],
+        demoLink: 'https://react-redux6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/Counter_App_React-Redux',
+      },
+      {
+        id: 4,
+        title: 'Country App',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/react-redux/react-reduxSS.png',
+          '/projectImages/react-redux/react-reduxSS.png',
+        ],
+        demoLink: 'https://responsive-countryapp6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/Country_App-React-',
+      },
+      {
+        id: 5,
+        title: 'Search Image',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/react-redux/react-reduxSS.png',
+          '/projectImages/react-redux/react-reduxSS.png',
+        ],
+
+        demoLink: 'https://searchingimg6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/Country_App-React-',
+      },
+      {
+        id: 6,
+        title: 'Tuatara',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/react-redux/react-reduxSS.png',
+          '/projectImages/react-redux/react-reduxSS.png',
+        ],
+
+        demoLink: 'https://responsivetutara6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/TuataraApp-ReactJs',
+      },
+      {
+        id: 7,
+        title: 'Counter App One',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/counter-react-redux/react-reduxSS.png',
+          '/projectImages/counter-react-redux/react-reduxSS.png',
+        ],
+        demoLink: 'https://react-redux6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/Counter_App_React-Redux',
+      },
     ],
   },
   {
@@ -205,6 +272,32 @@ export const projectsData = [
         demoLink: 'https://bcrypto-html-css.vercel.app/',
         githubLink:
           'https://github.com/Nazim6269/Portfolio_HTML_CSS_JS-Responsive-',
+      },
+      {
+        id: 5,
+        title: 'W3Codebs',
+        description: 'lorem',
+        technologies: ['html', 'css'],
+        screenshots: [
+          '/projectImages/w3codebs/w3codebsSS1.png',
+          '/projectImages/w3codebs/w3codebsSS2.png',
+          '/projectImages/w3codebs/w3codebsSS3.png',
+        ],
+        demoLink: 'https://w3codevs-html-css.vercel.app/',
+        githubLink: 'https://github.com/Nazim6269/w3codevs-html-css',
+      },
+      {
+        id: 6,
+        title: 'Unifinder',
+        description: 'lorem',
+        technologies: ['html', 'css'],
+        screenshots: [
+          '/projectImages/w3codebs/w3codebsSS1.png',
+          '/projectImages/w3codebs/w3codebsSS2.png',
+          '/projectImages/w3codebs/w3codebsSS3.png',
+        ],
+        demoLink: 'https://unifinder-html-css.vercel.app/',
+        githubLink: 'https://github.com/Nazim6269/unifinder-html-css',
       },
     ],
   },
