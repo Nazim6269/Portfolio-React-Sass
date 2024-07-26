@@ -33,8 +33,6 @@ const ProjectDetailsPage = () => {
     githubLink,
   } = project;
 
-  console.log(screenshots);
-
   const handleSSClick = (imgSrc) => {
     console.log(imgSrc);
     setSelectedImage(imgSrc);

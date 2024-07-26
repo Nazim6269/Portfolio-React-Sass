@@ -103,7 +103,20 @@ export const projectsData = [
     data: [
       {
         id: 1,
-        title: 'Dreams Food',
+        title: 'Twitter Social',
+        description:
+          'In this project i try to implement various functionality through, react, node.js, mongoDB and express.js',
+        technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+        screenshots: [
+          '/projectImages/dreams-food/expense-tracker.png',
+          '/projectImages/dreams-food/expense-tracker.png',
+        ],
+        demoLink: 'https://example.com/demo',
+        githubLink: 'https://github.com/Nazim6269/Dreams_Food-MERN',
+      },
+      {
+        id: 2,
+        title: 'NextJS Blog',
         description:
           'In this project i try to implement various functionality through, react, node.js, mongoDB and express.js',
         technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
@@ -140,8 +153,9 @@ export const projectsData = [
           'In this project i try to implement various functionality through, react, ',
         technologies: ['React', 'SCSS', 'Aos'],
         screenshots: [
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
+          '/projectImages/travel-app/travelAppSS1.png',
+          '/projectImages/travel-app/travelAppSS2.png',
+          '/projectImages/travel-app/travelAppSS3.png',
         ],
         demoLink: 'https://travel-app-woad-xi.vercel.app/',
         githubLink: 'https://github.com/Nazim6269/Travel_App',
@@ -166,8 +180,8 @@ export const projectsData = [
           'In this project i try to implement various functionality through, react, ',
         technologies: ['React', 'SCSS', 'Aos'],
         screenshots: [
-          '/projectImages/react-redux/react-reduxSS.png',
-          '/projectImages/react-redux/react-reduxSS.png',
+          '/projectImages/countryApp/countryAppSS1.png',
+          '/projectImages/countryApp/countryAppSS1.png',
         ],
         demoLink: 'https://responsive-countryapp6269.netlify.app/',
         githubLink: 'https://github.com/Nazim6269/Country_App-React-',
@@ -178,10 +192,7 @@ export const projectsData = [
         description:
           'In this project i try to implement various functionality through, react, ',
         technologies: ['React', 'SCSS', 'Aos'],
-        screenshots: [
-          '/projectImages/react-redux/react-reduxSS.png',
-          '/projectImages/react-redux/react-reduxSS.png',
-        ],
+        screenshots: ['/projectImages/imageSearch/imageSearchSS.png'],
 
         demoLink: 'https://searchingimg6269.netlify.app/',
         githubLink: 'https://github.com/Nazim6269/Country_App-React-',
@@ -193,8 +204,9 @@ export const projectsData = [
           'In this project i try to implement various functionality through, react, ',
         technologies: ['React', 'SCSS', 'Aos'],
         screenshots: [
-          '/projectImages/react-redux/react-reduxSS.png',
-          '/projectImages/react-redux/react-reduxSS.png',
+          '/projectImages/tuatara/tuataraSS1.png',
+          '/projectImages/tuatara/tuataraSS2.png',
+          '/projectImages/tuatara/tuataraSS3.png',
         ],
 
         demoLink: 'https://responsivetutara6269.netlify.app/',
@@ -207,11 +219,50 @@ export const projectsData = [
           'In this project i try to implement various functionality through, react, ',
         technologies: ['React', 'SCSS', 'Aos'],
         screenshots: [
-          '/projectImages/counter-react-redux/react-reduxSS.png',
-          '/projectImages/counter-react-redux/react-reduxSS.png',
+          '/projectImages/counterAppOne/counterAppSS.png',
+          '/projectImages/counterAppOne/counterAppSS.png',
         ],
         demoLink: 'https://react-redux6269.netlify.app/',
         githubLink: 'https://github.com/Nazim6269/Counter_App_React-Redux',
+      },
+      {
+        id: 8,
+        title: 'React Blog App',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/counterAppOne/counterAppSS.png',
+          '/projectImages/counterAppOne/counterAppSS.png',
+        ],
+        demoLink: 'https://react-redux6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/Blog_App',
+      },
+      {
+        id: 9,
+        title: 'YouTube Project',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/counterAppOne/counterAppSS.png',
+          '/projectImages/counterAppOne/counterAppSS.png',
+        ],
+        demoLink: 'https://react-redux6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/YouTube_Project',
+      },
+      {
+        id: 10,
+        title: 'Track Zone',
+        description:
+          'In this project i try to implement various functionality through, react, ',
+        technologies: ['React', 'SCSS', 'Aos'],
+        screenshots: [
+          '/projectImages/counterAppOne/counterAppSS.png',
+          '/projectImages/counterAppOne/counterAppSS.png',
+        ],
+        demoLink: 'https://react-redux6269.netlify.app/',
+        githubLink: 'https://github.com/Nazim6269/YouTube_Project',
       },
     ],
   },
@@ -238,8 +289,8 @@ export const projectsData = [
         description: 'lorem',
         technologies: ['html', 'css'],
         screenshots: [
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
+          '/projectImages/bloom/bloomSS1.png',
+          '/projectImages/bloom/bloomSS2.png',
         ],
         demoLink: 'https://bloom-html-css.vercel.app/',
         githubLink:
@@ -266,8 +317,9 @@ export const projectsData = [
         description: 'lorem',
         technologies: ['html', 'css'],
         screenshots: [
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
+          '/projectImages/bCrypto/bcryptoSS1.png',
+          '/projectImages/bCrypto/bcryptoSS2.png',
+          '/projectImages/bCrypto/bcryptoSS3.png',
         ],
         demoLink: 'https://bcrypto-html-css.vercel.app/',
         githubLink:
@@ -291,11 +343,7 @@ export const projectsData = [
         title: 'Unifinder',
         description: 'lorem',
         technologies: ['html', 'css'],
-        screenshots: [
-          '/projectImages/w3codebs/w3codebsSS1.png',
-          '/projectImages/w3codebs/w3codebsSS2.png',
-          '/projectImages/w3codebs/w3codebsSS3.png',
-        ],
+        screenshots: ['/projectImages/unifinder/unifinderSS1.png'],
         demoLink: 'https://unifinder-html-css.vercel.app/',
         githubLink: 'https://github.com/Nazim6269/unifinder-html-css',
       },
@@ -307,7 +355,35 @@ export const projectsData = [
     data: [
       {
         id: 1,
-        title: 'Rampa UI Design',
+        title: 'Animated Digital Clock',
+        description: 'lorem',
+        technologies: ['html', 'css', 'JS'],
+        screenshots: ['/projectImages/animatedClock/animatedClock.png'],
+        demoLink: 'https://animated-digital-clock.vercel.app/',
+        githubLink: 'https://github.com/Nazim6269/animatedDigitalClock',
+      },
+      {
+        id: 2,
+        title: 'Digital Clock',
+        description: 'lorem',
+        technologies: ['html', 'css', 'JS'],
+        screenshots: [
+          '/projectImages/html-css-portfolio/portfolioSS1.png',
+          '/projectImages/html-css-portfolio/portfolioSS1.png',
+        ],
+
+        demoLink: 'https://digital-clock-xi-sepia.vercel.app/',
+        githubLink: 'https://github.com/Nazim6269/digitalClock',
+      },
+    ],
+  },
+  {
+    id: 4,
+    category: 'MERN',
+    data: [
+      {
+        id: 1,
+        title: "DREAM&'S FOOD",
         description: 'lorem',
         technologies: ['html', 'css', 'JS'],
         screenshots: [
@@ -321,21 +397,17 @@ export const projectsData = [
     ],
   },
   {
-    id: 4,
-    category: 'MERN',
+    id: 5,
+    category: 'DOM',
     data: [
       {
         id: 1,
-        title: 'E-commerce Web Design',
+        title: 'Color Picker',
         description: 'lorem',
         technologies: ['html', 'css', 'JS'],
-        screenshots: [
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
-          '/projectImages/html-css-portfolio/portfolioSS1.png',
-        ],
-        demoLink: 'https://portfolio-html-css-js-orpin.vercel.app/',
-        githubLink:
-          'https://github.com/Nazim6269/Portfolio_HTML_CSS_JS-Responsive-',
+        screenshots: ['/projectImages/colorPicker/colorPicker.png'],
+        demoLink: 'https://color-picker-tau-rosy.vercel.app/',
+        githubLink: 'https://github.com/Nazim6269/colorPicker',
       },
     ],
   },

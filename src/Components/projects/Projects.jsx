@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../context/context';
 import { projectsData } from '../../data';
 import ProjectsList from '../projectList/ProjectsList';
@@ -9,6 +9,8 @@ export default function Projects() {
   const [selectCategory, setSelectCategory] = useState('MERN');
   const { theme } = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location, 'location');
 
   const filteredData = projectsData.filter(
     (item) => item.category === selectCategory,

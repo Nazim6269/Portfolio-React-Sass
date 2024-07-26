@@ -1,0 +1,13 @@
+@import '../../variable';
+
+.breadcrumbs {
+  color: aqua;
+  padding: 8px 10px;
+}
+
+.breadcrumbs_item {
+  color: $main-color;
+  text-decoration: none;
+  margin-right: 8px;
+  text-transform: capitalize;
+}
