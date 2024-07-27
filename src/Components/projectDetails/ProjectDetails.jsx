@@ -77,13 +77,13 @@ const ProjectDetailsPage = () => {
           ))}
         </div>
 
-        <div className="project-details_btn">
+        <div className="project-details__btn-group">
           <div className="project-details_btn-item">
             {demoLink && (
               <div>
-                <Button variant="contained">
+                <button className="project-details__btn">
                   <Link to={demoLink}>Live Demo</Link>
-                </Button>
+                </button>
               </div>
             )}
           </div>
@@ -92,9 +92,9 @@ const ProjectDetailsPage = () => {
             {' '}
             {githubLink && (
               <div>
-                <Button variant="contained">
+                <button className="project-details__btn">
                   <Link to={githubLink}>GitHub Repository</Link>
-                </Button>
+                </button>
               </div>
             )}
           </div>

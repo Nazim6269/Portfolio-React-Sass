@@ -3,10 +3,10 @@
 
 .footer {
   //color: #fff;
-  background-image: url('/footerImage/bg_project2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  // background-image: url('/footerImage/footer-bg.jpg');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: cover;
   height: auto;
   // color: #fff;
   padding: 2rem;
@@ -20,7 +20,8 @@
   }
 
   &.dark {
-    background-color: rgb(6, 6, 29);
+    background-color: $secondary-footer-bg-color;
+
     color: white;
   }
 }
@@ -105,6 +106,10 @@
   margin: 1rem 0;
 }
 
+.footer__links a {
+  color: #fff;
+}
+
 .footer__link {
   text-decoration: none;
 
@@ -123,7 +128,7 @@
 
 .footer__bottom {
   text-align: center;
-  border-top: 1px solid #444;
+  border-top: 1px solid $hover-color;
   padding-top: 1rem;
   width: 100%;
 }

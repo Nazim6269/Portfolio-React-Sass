@@ -1,7 +1,8 @@
 @import '../../variable';
 
 .breadcrumbs_container {
-  background-color: $mainColor;
+  background-color: $secondary-topbar-bg;
+  border-top: 1px solid $hover-color;
 }
 
 .breadcrumbs_items {

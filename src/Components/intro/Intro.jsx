@@ -78,7 +78,7 @@ const Intro = () => {
           >
             <img
               className="intro__cartoonIcon"
-              src="/introImage/icon_3.png"
+              src="/introImage/icon_1.png"
               alt="Icon Rotate"
             />
           </motion.div>

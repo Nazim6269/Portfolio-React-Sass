@@ -4,7 +4,7 @@
 .skills {
   padding: 20px;
   text-align: center;
-  background-image: url('/skillImage/bg-slider.png');
+  background-image: url('/skillImage/skill-bg-two.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -15,7 +15,6 @@
   }
 
   &.dark {
-    background-color: $mainColor;
     color: white;
   }
 }

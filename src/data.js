@@ -383,7 +383,7 @@ export const projectsData = [
     data: [
       {
         id: 1,
-        title: "DREAM&'S FOOD",
+        title: "DREAM'S FOOD",
         description: 'lorem',
         technologies: ['html', 'css', 'JS'],
         screenshots: [

@@ -1,13 +1,37 @@
 @import '../../variable';
 
+//================local variables================//
+@mixin button-styles {
+  background-color: #86ff00;
+
+  outline: none;
+  border: none;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  font-weight: bold;
+  padding: 12px 30px;
+  color: #000;
+  &:hover {
+    background-color: $hover-color-secondary;
+  }
+}
+
 .project-details-container {
-  background-color: $primary-bg-color-details;
+  background-image: url('../../../public/introImage/intro-bg-three.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .project-details {
   max-width: 70%;
   margin: 0 auto;
   padding: 30px 0;
-  //color: $primary-text-color;
+  color: $primary-text-color;
   height: 100vh;
 
   h2 {
@@ -60,8 +84,21 @@
   }
 }
 
-.project-details_btn {
+.project-details__btn-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.project-details__btn {
+  @include button-styles;
+}
+
+.project-details__btn a {
+  color: #000;
+  font-size: $pDatils-font-size-small;
+
+  &:hover {
+    color: $primary-text-color;
+  }
 }

@@ -30,10 +30,11 @@ $default-border-color: transparent;
 .contact {
   color: #ffffff;
   padding: 4rem 0;
-  background-image: url('/contactImage/bg_project2.png');
+  background-image: url('/contactImage/contact-bg-one.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 
   &.light {
     background-color: white;

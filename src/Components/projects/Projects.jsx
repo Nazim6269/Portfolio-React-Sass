@@ -41,8 +41,8 @@ export default function Projects() {
           <div key={item.id} className="projects__item">
             <div onClick={() => handleClick(item.id, selectCategory)}>
               <img src={item.screenshots[0]} alt={item.title} />
+              <h4>{item.title}</h4>
             </div>
-            <h3>{item.title}</h3>
           </div>
         ))}
       </div>
