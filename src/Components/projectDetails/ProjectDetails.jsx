@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { projectsData } from '../../data';
@@ -48,14 +49,23 @@ const ProjectDetailsPage = () => {
         <h2>{title}</h2>
         <p>{description}</p>
 
-        <h3>Technologies Used:</h3>
+        <h3>Features</h3>
+        <ol>
+          <li>I love my profession</li>
+          <li>I love my profession</li>
+          <li>I love my profession</li>
+          <li>I love my profession</li>
+        </ol>
+
+        <h3>Technologies Used</h3>
         <ul>
           {technologies?.map((tech) => (
             <li key={id}>{tech}</li>
           ))}
         </ul>
 
-        <h3>Screenshots:</h3>
+        <h3>Screenshots</h3>
+
         <div className="screenshots">
           {screenshots?.map((screenshot) => (
             <img
@@ -67,17 +77,28 @@ const ProjectDetailsPage = () => {
           ))}
         </div>
 
-        {demoLink && (
-          <div>
-            <Link to={demoLink}>Live Demo</Link>
+        <div className="project-details_btn">
+          <div className="project-details_btn-item">
+            {demoLink && (
+              <div>
+                <Button variant="contained">
+                  <Link to={demoLink}>Live Demo</Link>
+                </Button>
+              </div>
+            )}
           </div>
-        )}
 
-        {githubLink && (
-          <div>
-            <Link to={githubLink}>GitHub Repository</Link>
+          <div className="project-details_btn-item">
+            {' '}
+            {githubLink && (
+              <div>
+                <Button variant="contained">
+                  <Link to={githubLink}>GitHub Repository</Link>
+                </Button>
+              </div>
+            )}
           </div>
-        )}
+        </div>
 
         {selectedImage && (
           <ImageModal imageSrc={selectedImage} onClose={closeModal} />

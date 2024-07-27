@@ -1,12 +1,18 @@
 @import '../../variable';
 
-.breadcrumbs {
+.breadcrumbs_container {
+  background-color: $mainColor;
+}
+
+.breadcrumbs_items {
   color: aqua;
-  padding: 8px 10px;
+  padding: 18px 0px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .breadcrumbs_item {
-  color: $main-color;
+  color: white;
   text-decoration: none;
   margin-right: 8px;
   text-transform: capitalize;

@@ -1,3 +1,4 @@
+import { motion, useScroll } from 'framer-motion';
 import React from 'react';
 import {
   TiSocialFacebook,
@@ -38,14 +39,23 @@ const socialIcons = [
   },
 ];
 
+//TODO: Animation with scroll
+
 const Footer = ({ location }) => {
   const { theme } = useTheme();
+  const scroll = useScroll();
 
   return (
     <footer className={`footer ${theme}`}>
+      {/* <img src="/projectImages/NU 4.png" /> */}
       <div className="footer__content">
         <div className="footer__section footer__section--social">
-          <h4 className="footer__title">Follow me</h4>
+          <motion.div
+            className="footer__title"
+            style={{ scaleX: scroll.scrollYProgress }}
+          >
+            Follow me
+          </motion.div>
           {/* ================social icons componenst=============== */}
           <div className="footer__social-icons">
             <SocialIcons icons={socialIcons} />
@@ -60,9 +70,12 @@ const Footer = ({ location }) => {
         <div className="footer__section footer__section--links">
           <h4 className="footer__title">Quick Links</h4>
           {/* ========== nav links component ============= */}
-          <ul className="footer__links">
+          <motion.div
+            className="footer__links"
+            style={{ scaleX: scroll.scrollYProgress }}
+          >
             <NavLinks navArray={navArray} />
-          </ul>
+          </motion.div>
         </div>
       </div>
       <div className="footer__bottom">

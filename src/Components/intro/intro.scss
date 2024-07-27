@@ -24,7 +24,7 @@
 //==========sass code start from here=============//
 .intro {
   color: $primary-text-color;
-  background-image: url('/introImage/bg-slider.png');
+  background-image: url('/introImage/intro-bg-one.jpg');
 
   z-index: 1;
   background-position: center;
@@ -38,7 +38,7 @@
   }
 
   &.dark {
-    background-color: #050724;
+    background-color: $primary-intro-bg-color;
     color: white;
   }
 
@@ -108,7 +108,7 @@
 }
 .intro__item-container span {
   font-size: inherit;
-  color: crimson;
+  color: $primary-btn-background;
 }
 
 .intro__right {

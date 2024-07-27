@@ -1,14 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import Breadcrumbs from '../Components/breadcrumbs/Breadcrumbs';
 import Footer from '../Components/footer/Footer';
 import Topbar from '../Components/topbar/Topbar';
-import Breadcrumbs from '../Components/breadcrumbs/Breadcrumbs';
 
 const RootLayout = () => {
+  const location = useLocation();
   return (
     <>
       <Topbar />
-      <Breadcrumbs />
+      {location.pathname !== '/' ? <Breadcrumbs /> : null}
       <main>
         <Outlet />
       </main>

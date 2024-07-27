@@ -64,7 +64,7 @@ const Intro = () => {
           >
             <img
               className="intro__planeIcon"
-              src="/introImage/Furore.png"
+              src="/introImage/cartoon.png"
               alt="Icon Y"
             />
           </motion.div>

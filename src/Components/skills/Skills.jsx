@@ -1,7 +1,7 @@
 import React from 'react';
+import { useTheme } from '../../context/context.jsx';
 import { skillsData } from '../../data.js';
 import './skills.scss'; // Updated to .scss
-import { useTheme } from '../../context/context.jsx';
 
 export default function Skills() {
   const { theme } = useTheme();

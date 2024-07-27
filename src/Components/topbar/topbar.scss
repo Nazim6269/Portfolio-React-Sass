@@ -5,7 +5,7 @@
 .topbar {
   width: 100%;
   transition: all 1s ease;
-  background-color: $primary-color;
+  background-color: $secondary-topbar-bg;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@
   }
 
   &.dark {
-    background-color: $primary-color;
+    background-color: $secondary-topbar-bg;
     color: white;
   }
 

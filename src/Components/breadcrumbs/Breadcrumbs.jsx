@@ -9,16 +9,18 @@ const Breadcrumbs = () => {
   const crumbs = location.pathname.split('/').filter((crumb) => crumb !== '');
 
   return (
-    <div className="breadcrumbs">
-      {crumbs.map((crumb, index) => {
-        currentLink = +`/${crumb}`;
-        const isLast = index === crumbs.length - 1;
-        return (
-          <Link to={currentLink} key={crumb} className="breadcrumbs_item">
-            {crumb} {!isLast && '||'}
-          </Link>
-        );
-      })}
+    <div className="breadcrumbs_container">
+      <div className="breadcrumbs_items">
+        {crumbs.map((crumb, index) => {
+          currentLink = +`/${crumb}`;
+          const isLast = index === crumbs.length - 1;
+          return (
+            <Link to={currentLink} key={crumb} className="breadcrumbs_item">
+              {crumb} {!isLast && '/'}
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 };
