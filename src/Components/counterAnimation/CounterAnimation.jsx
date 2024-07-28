@@ -1,6 +1,8 @@
 import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
+//TODO: have to add plus sign after roundedValue
+
 const CounterAnimation = () => {
   const [hasCounted, setHasCounted] = useState(false);
   const count = useMotionValue(0);

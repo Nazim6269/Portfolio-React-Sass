@@ -1,4 +1,5 @@
 @import '../../variable';
+@import '../../breakpoints';
 
 //================local variables================//
 @mixin button-styles {
@@ -88,15 +89,29 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+
+  @include breakpoint(445px) {
+    gap: 75px;
+  }
 }
 
 .project-details__btn {
   @include button-styles;
+  padding: 8px 6px;
+
+  @include sx {
+    padding: 10px 14px;
+  }
+
+  @include breakpoint(530px) {
+    @include button-styles;
+  }
 }
 
 .project-details__btn a {
   color: #000;
-  font-size: $pDatils-font-size-small;
+  font-size: $pDetails-font-size-small;
 
   &:hover {
     color: $primary-text-color;

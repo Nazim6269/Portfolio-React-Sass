@@ -12,8 +12,9 @@ const Breadcrumbs = () => {
     <div className="breadcrumbs_container">
       <div className="breadcrumbs_items">
         {crumbs.map((crumb, index) => {
-          currentLink = +`/${crumb}`;
+          currentLink = `/${crumb}`;
           const isLast = index === crumbs.length - 1;
+          console.log('currentLink', currentLink);
           return (
             <Link to={currentLink} key={crumb} className="breadcrumbs_item">
               {crumb} {!isLast && '/'}

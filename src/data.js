@@ -138,6 +138,7 @@ export const projectsData = [
         title: 'Expense Tracker',
         description:
           'In this project i try to implement various functionality through, react, ',
+        features: ['You can add our cost', 'Delete your cost'],
         technologies: ['React', 'Express', 'MongoDB'],
         screenshots: [
           '/projectImages/expenseTracker/expense-tracker.png',

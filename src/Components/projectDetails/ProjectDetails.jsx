@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { projectsData } from '../../data';
@@ -26,6 +25,7 @@ const ProjectDetailsPage = () => {
 
   const {
     title,
+    features,
     technologies,
     screenshots,
     description,
@@ -50,12 +50,10 @@ const ProjectDetailsPage = () => {
         <p>{description}</p>
 
         <h3>Features</h3>
-        <ol>
-          <li>I love my profession</li>
-          <li>I love my profession</li>
-          <li>I love my profession</li>
-          <li>I love my profession</li>
-        </ol>
+        <ul>
+          {features &&
+            features.map((feature, index) => <li key={index}>{feature}</li>)}
+        </ul>
 
         <h3>Technologies Used</h3>
         <ul>
