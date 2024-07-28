@@ -1,50 +1,25 @@
-import { motion, useSpring, useTransform } from 'framer-motion';
+import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
 import { useEffect } from 'react';
 
-const Digit = ({ place, value }) => {
-  let valueRoundedToPlace = Math.floor(value / place);
-  let animatedValue = useSpring(valueRoundedToPlace);
+const CounterAnimation = () => {
+  const count = useMotionValue(0);
+  const roundedValue = useTransform(count, Math.round);
 
   useEffect(() => {
-    animatedValue.set(valueRoundedToPlace);
-  }, [animatedValue, valueRoundedToPlace]);
+    const animation = animate(count, 100, { duration: 2 });
 
+    return animation.stop;
+  }, [count]);
   return (
-    <div style={{ height }}>
-      {[...Array(10).keys()].map((i) => (
-        <Number key={i} mv={animatedValue} number={i} />
-      ))}
-    </div>
-  );
-};
-
-const Number = ({ mv, number }) => {
-  let y = useTransform(mv, (latest) => {
-    let placeValue = latest % 10;
-    let offset = (10 + number - placeValue) % 10;
-
-    let memo = offset * height;
-
-    if (offset > 5) {
-      memo -= 10 * height;
-    }
-
-    return memo;
-  });
-
-  return <motion.span style={{ y }}>{number}</motion.span>;
-};
-
-const fontSize = 30;
-const padding = 15;
-const height = fontSize + padding;
-
-const CounterAnimation = ({ value }) => {
-  return (
-    <div style={{ fontSize }}>
-      <Digit place={100} value={value} />
-      <Digit place={10} value={value} />
-      <Digit place={1} value={value} />
+    <div className="animation__container">
+      <div className="animation__wrapper">
+        <h1>Acknowledgements</h1>
+        <div className="animation__items">
+          <motion.div className="animation__item">{roundedValue}</motion.div>
+          <motion.div className="animation__item">{roundedValue}</motion.div>
+          <motion.div className="animation__item">{roundedValue}</motion.div>
+        </div>
+      </div>
     </div>
   );
 };

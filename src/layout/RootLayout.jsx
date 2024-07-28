@@ -14,7 +14,6 @@ const RootLayout = () => {
       <main>
         <Outlet />
       </main>
-      {/* <CounterAnimation value={100} /> */}
       <Footer
         location={'Al falah goli, sholo-shohor, Chittagong, Bangladesh'}
       />

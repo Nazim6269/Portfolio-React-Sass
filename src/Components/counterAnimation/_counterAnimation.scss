@@ -1,0 +1,31 @@
+@import '../../variable';
+
+.animation__container {
+  width: 100%;
+  background-color: $counter-bg-primary;
+  block-size: cover;
+  color: $counter-text-primary;
+}
+
+.animation__wrapper {
+  width: 70%;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.animation__wrapper h1 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: $counter-font-md;
+}
+
+.animation__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animation__item {
+  font-size: $counter-font-lg;
+  font-weight: bold;
+}
