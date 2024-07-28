@@ -36,6 +36,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      a {
+        color: $topbar-logo-color-primary;
+      }
 
       &__logo {
         font-size: $font-size-medium;

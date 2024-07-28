@@ -1,14 +1,14 @@
 import { NightlightOutlined, WbSunnyOutlined } from '@mui/icons-material';
-import * as React from 'react';
+import './_themeSwitch.scss';
 
 export default function ThemeSwitch({ onClick, theme }) {
   return (
-    <>
+    <div className="theme-switch">
       {theme === 'dark' ? (
-        <WbSunnyOutlined onClick={onClick} />
+        <WbSunnyOutlined onClick={onClick} className="theme-switch__light" />
       ) : (
-        <NightlightOutlined onClick={onClick} />
+        <NightlightOutlined onClick={onClick} className="theme-switch__dark" />
       )}
-    </>
+    </div>
   );
 }

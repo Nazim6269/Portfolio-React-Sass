@@ -96,8 +96,9 @@
 
 .intro__item-container h3 {
   font-size: $intro-font-size-small;
-  margin-bottom: 45px;
+  // margin-bottom: 45px;
   display: flex;
+  height: 105px;
   flex-direction: column;
 
   @include sm {

@@ -13,6 +13,7 @@ $font-size-medium: 30px;
 $font-size-small: 15px;
 $font-weight-bold: bold;
 $main-color: #e20ee9;
+$topbar-logo-color-primary: #86ff00;
 
 //======== intro variables==============//
 $hover-color-secondary: #798da3;
@@ -45,3 +46,8 @@ $counter-text-primary: #fff;
 $counter-font-lg: 70px;
 $counter-font-md: 45px;
 $counter-bg-primary: #040b11;
+
+//======== theme switch variables=============//
+$theme-switch-bg: rgb(45, 43, 43);
+$primary-switch-light-color: #86ff00;
+$primary-switch-dark-color: #fff;

@@ -20,7 +20,6 @@ const Topbar = () => {
         {/* ========= Left portion ========= */}
         <div className="topbar__wrapper__left">
           <div>
-            {' '}
             <Link to={'/'} className="topbar__wrapper__left__logo">
               Pro.
             </Link>

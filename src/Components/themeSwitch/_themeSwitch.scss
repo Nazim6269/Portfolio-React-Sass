@@ -1,0 +1,18 @@
+@import '../../variable';
+
+.theme-switch {
+  background-color: $theme-switch-bg;
+  padding: 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.theme-switch__light {
+  color: $primary-switch-light-color;
+}
+
+.theme-switch__dark {
+  color: $primary-switch-dark-color;
+}
