@@ -20,9 +20,13 @@ const Intro = () => {
             <h2>Hi There, I&apos;m</h2>
             <h1>Nazim Uddin</h1>
             <h3>
-              Freelance with{' '}
+              I am
               <span>
-                <TypingAnimation text={'Developer'} delay={500} infinite />
+                <TypingAnimation
+                  text={'Front end Developer'}
+                  delay={500}
+                  infinite
+                />
               </span>
             </h3>
             <div className="intro__btn">

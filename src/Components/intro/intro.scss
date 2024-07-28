@@ -31,16 +31,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
-
-  &.light {
-    background-color: white;
-    color: black;
-  }
-
-  &.dark {
-    background-color: $primary-intro-bg-color;
-    color: white;
-  }
+  color: white;
 
   &__wrapper {
     width: 100%;

@@ -20,9 +20,9 @@ const MenuModal = ({ onClose }) => {
           </li>
         ))}
 
-        <Button variant="outlined" size="small" onClick={onClose}>
+        <button className="menu-modal__btn" onClick={onClose}>
           Close
-        </Button>
+        </button>
       </ul>
     </div>
   );

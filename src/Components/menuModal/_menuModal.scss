@@ -1,6 +1,27 @@
 @import '../../variable';
 @import '../../breakpoints';
 
+//================local variables================//
+@mixin button-styles {
+  background-color: #86ff00;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  font-weight: bold;
+  padding: 12px 30px;
+  color: #000;
+  &:hover {
+    background-color: $hover-color-secondary;
+    color: $primary-text-color;
+  }
+}
+
+//======== SCSS code =============//
 .menu-modal {
   position: fixed;
   top: 0;
@@ -18,18 +39,18 @@
     padding: 10px 20px;
     margin: 0;
     text-align: center;
-    background-color: $primary-text-color;
+    background-color: $menu-modal-bg;
     width: 215px;
     height: auto;
-    border-radius: 17px;
+    border-radius: 7px;
 
     &-item {
       margin: 10px 0;
 
       a {
         text-decoration: none;
-        color: #000;
-        font-size: 18px;
+        color: $menu-modal-text;
+        font-size: 17px;
         transition: color 0.3s;
 
         &:hover {
@@ -42,4 +63,13 @@
   .MuiButton-root {
     margin-top: 20px;
   }
+}
+
+.menu-modal__btn {
+  @include button-styles;
+
+  outline: none;
+  border: none;
+  padding: 9px 25px;
+  font-size: 15px;
 }

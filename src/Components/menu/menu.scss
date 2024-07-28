@@ -7,12 +7,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.5s ease all;
 }
 
 .menu ul li {
   margin-bottom: 25px;
   font-weight: bold;
   margin: auto 6px;
+  transition: 0.5s ease all;
 
   &.light {
     color: black;
@@ -30,6 +32,7 @@
 
   &:hover {
     font-weight: 500;
+    transition: 0.5s ease all;
     color: #86ff00;
   }
 

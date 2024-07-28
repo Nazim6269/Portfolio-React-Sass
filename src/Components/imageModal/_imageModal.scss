@@ -1,3 +1,26 @@
+@import '../../variable';
+
+//================local variables================//
+@mixin button-styles {
+  background-color: #86ff00;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+  font-weight: bold;
+  padding: 12px 30px;
+  color: #000;
+  &:hover {
+    background-color: $hover-color-secondary;
+    color: $primary-text-color;
+  }
+}
+
+//============ SCSS code ===============//
 .image-modal {
   position: fixed;
   top: 0;
@@ -27,12 +50,10 @@
       bottom: 10px;
       right: 10px;
       button {
+        @include button-styles;
         padding: 10px 20px;
-        background: #007bff;
-        color: white;
+        outline: none;
         border: none;
-        border-radius: 5px;
-        cursor: pointer;
       }
     }
   }

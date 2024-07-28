@@ -35,16 +35,7 @@ $default-border-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-
-  &.light {
-    background-color: white;
-    color: black;
-  }
-
-  &.dark {
-    background-color: $primary-contact-bg-color;
-    color: white;
-  }
+  color: white;
 }
 
 .contact h1 {
