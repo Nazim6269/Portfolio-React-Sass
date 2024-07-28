@@ -1,4 +1,6 @@
 import { Mail, Person } from '@mui/icons-material';
+import NightlightRoundOutlinedIcon from '@mui/icons-material/NightlightRoundOutlined';
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
